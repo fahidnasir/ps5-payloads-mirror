@@ -174,5 +174,9 @@
   "ps5upload_v5.17.4.elf": {
     "download_count": 339,
     "deleted_at": "2026-09-09"
+  },
+  "ps5upload_v5.17.7.elf": {
+    "download_count": 659,
+    "deleted_at": "2026-09-11"
   }
 }
