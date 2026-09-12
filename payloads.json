@@ -24,6 +24,18 @@
     "checksum": "aa3f98847948e2ae8ea600c3f437e28247a0a4f8b73651a046d2859924bf97b3"
   },
   {
+    "name": "Spectrum-Library",
+    "filename": "Spectrum-Library_1.4.5.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/Spectrum-Library_1.4.5.elf",
+    "source": "https://github.com/Phoenixx1202/Spectrum-Library/releases",
+    "source_direct": "https://github.com/Phoenixx1202/Spectrum-Library/releases/download/1.4.5/SpectrumLibrary_1.4.5.elf",
+    "description": "Spectrum Library",
+    "last_update": "2026-09-11",
+    "version": "1.4.5",
+    "category": "Utilities & Tools",
+    "checksum": "cd93973a89263fad0b13b39d77d7fbb401c7c7c641bc036965876c810ebf534e"
+  },
+  {
     "name": "pegasus-dl",
     "filename": "pegasus-dl_v1.8.0.elf",
     "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/pegasus-dl_v1.8.0.elf",
