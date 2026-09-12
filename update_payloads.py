@@ -12,7 +12,7 @@ from datetime import datetime
 
 JSON_FILE = "payloads.json"
 PAYLOADS_DIR = "payloads"
-BASE_URL = "https://github.com/itsPLK/ps5-payloads-mirror/releases/download/payloads-mirror"
+BASE_URL = "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror"
 STATS_FILE = "download_stats.json"
 
 def get_repo_info(url):
@@ -132,7 +132,7 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 
 ## Support & Suggestions
 
-If you have suggestions for a new payload to be added or if there's an important issue with some payload, please report them in the [Issues section](https://github.com/itsPLK/ps5-payloads-mirror/issues/new).
+If you have suggestions for a new payload to be added or if there's an important issue with some payload, please report them in the [Issues section](https://github.com/fahidnasir/ps5-payloads-mirror/issues/new).
 """
 
     if not os.path.exists(readme_path):
@@ -159,7 +159,7 @@ If you have suggestions for a new payload to be added or if there's an important
 
 
 def get_mirror_assets():
-    owner = "itsPLK"
+    owner = "fahidnasir"
     repo = "ps5-payloads-mirror"
     try:
         cmd = ["gh", "api", f"repos/{owner}/{repo}/releases/tags/payloads-mirror"]
@@ -173,9 +173,9 @@ def get_mirror_assets():
 
 def cleanup_and_record_stats():
     print("\nChecking for stale release assets to record stats and clean up...")
-    owner = "itsPLK"
+    owner = "fahidnasir"
     repo = "ps5-payloads-mirror"
-    
+
     try:
         with open(JSON_FILE, "r") as f:
             payloads = json.load(f)
