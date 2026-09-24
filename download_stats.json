@@ -222,5 +222,17 @@
   "ps5upload_v5.31.4.elf": {
     "download_count": 0,
     "deleted_at": "2026-09-23"
+  },
+  "elf-arsenal_v1.6.22.elf": {
+    "download_count": 2,
+    "deleted_at": "2026-09-24"
+  },
+  "ps5debug-NG_1.3.0.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-09-24"
+  },
+  "ps5upload_v5.33.1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-09-24"
   }
 }
