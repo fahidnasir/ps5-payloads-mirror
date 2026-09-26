@@ -7,7 +7,7 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 <!-- PAYLOADS_START -->
 | Payload | Version | Description | Last Updated | Source | Download |
 | --- | --- | --- | --- | --- | --- |
-| **ps5upload** | `v5.33.2` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-09-23` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v5.33.2.elf) |
+| **ps5upload** | `v5.34.0` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-09-25` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v5.34.0.elf) |
 | **elf-arsenal** | `v1.6.23` | ELF Arsenal | `2026-09-23` | [Source](https://git.etawen.dev/soniciso/elf-arsenal/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/elf-arsenal_v1.6.23.elf) |
 | **ps5debug-NG** | `1.3.2` | PS5 debugger payload - userland TCP wire-protocol server hosted inside SceShellCore. | `2026-09-23` | [Source](https://github.com/OpenSourcereR-dev/ps5debug-NG/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5debug-NG_1.3.2.elf) |
 | **ShadowMountPlus** | `1.7beta2` | A fully automated, background 'Auto-Mounter' payload for Jailbroken PlayStation 5 consoles. | `2026-09-21` | [Source](https://github.com/drakmor/ShadowMountPlus/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus_1.7beta2.elf) |
