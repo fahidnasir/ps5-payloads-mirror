@@ -1,15 +1,27 @@
 [
   {
     "name": "ps5upload",
-    "filename": "ps5upload_v5.34.0.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v5.34.0.elf",
+    "filename": "ps5upload_v5.36.0.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v5.36.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.34.0/ps5upload-5.34.0.elf",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.36.0/ps5upload-5.36.0.elf",
     "description": "Fast, reliable transfers from your computer to your PS5 (requires PC app)",
-    "last_update": "2026-09-25",
-    "version": "v5.34.0",
+    "last_update": "2026-09-27",
+    "version": "v5.36.0",
     "category": "Networking & Servers",
-    "checksum": "fbe6fb2c306828d72bffefef4e4149ec189a748c3f7662dffeb6c281bf7437c0"
+    "checksum": "b1a10ae2b55ae8929681941991535226610d3fe2af9454a34d260e5884c8d336"
+  },
+  {
+    "name": "Spectrum-Library",
+    "filename": "Spectrum-Library_1.4.7.bin",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/Spectrum-Library_1.4.7.bin",
+    "source": "https://github.com/Phoenixx1202/Spectrum-Library/releases",
+    "source_direct": "https://github.com/Phoenixx1202/Spectrum-Library/releases/download/1.4.7/LegacyJB_1.1.bin",
+    "description": "Spectrum Library",
+    "last_update": "2026-09-27",
+    "version": "1.4.7",
+    "category": "Utilities & Tools",
+    "checksum": "9c7b60380153cda2eb4a6f20ddc46774a621706388714d0fd97b492a6152f751"
   },
   {
     "name": "elf-arsenal",
@@ -71,18 +83,6 @@
     "version": "1.16-ng-stable",
     "category": "Networking & Servers",
     "checksum": "f19ae469b25453a7a4af4529527521d31f143100f18a2c6839666e7121c8bd32"
-  },
-  {
-    "name": "Spectrum-Library",
-    "filename": "Spectrum-Library_1.4.6.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/Spectrum-Library_1.4.6.elf",
-    "source": "https://github.com/Phoenixx1202/Spectrum-Library/releases",
-    "source_direct": "https://github.com/Phoenixx1202/Spectrum-Library/releases/download/1.4.6/SpectrumLibrary_1.4.6.elf",
-    "description": "Spectrum Library",
-    "last_update": "2026-09-19",
-    "version": "1.4.6",
-    "category": "Utilities & Tools",
-    "checksum": "73dd3f3938867ac970207ae8e4093e2d0c5b005bcad1ff9ff2aeb5d34294a161"
   },
   {
     "name": "garlic-savemgr",
