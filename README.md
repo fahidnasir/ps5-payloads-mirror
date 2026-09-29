@@ -7,7 +7,7 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 <!-- PAYLOADS_START -->
 | Payload | Version | Description | Last Updated | Source | Download |
 | --- | --- | --- | --- | --- | --- |
-| **ps5upload** | `v5.36.0` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-09-27` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v5.36.0.elf) |
+| **ps5upload** | `v5.38.0` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-09-29` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v5.38.0.elf) |
 | **Spectrum-Library** | `1.4.7` | Spectrum Library | `2026-09-27` | [Source](https://github.com/Phoenixx1202/Spectrum-Library/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/Spectrum-Library_1.4.7.bin) |
 | **elf-arsenal** | `v1.6.23` | ELF Arsenal | `2026-09-23` | [Source](https://git.etawen.dev/soniciso/elf-arsenal/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/elf-arsenal_v1.6.23.elf) |
 | **ps5debug-NG** | `1.3.2` | PS5 debugger payload - userland TCP wire-protocol server hosted inside SceShellCore. | `2026-09-23` | [Source](https://github.com/OpenSourcereR-dev/ps5debug-NG/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5debug-NG_1.3.2.elf) |
