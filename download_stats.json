@@ -254,5 +254,25 @@
   "ps5upload_v5.36.0.elf": {
     "download_count": 0,
     "deleted_at": "2026-09-29"
+  },
+  "pegasus-dl_v1.9.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-09-30"
+  },
+  "pldmgr_v0.5.1.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-09-30"
+  },
+  "ps5-app-dumper_v1.11.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-09-30"
+  },
+  "ps5upload_v5.38.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-09-30"
+  },
+  "WebKit-Autoloader-Installer_v0.4.0.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-09-30"
   }
 }
