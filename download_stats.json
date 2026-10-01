@@ -274,5 +274,25 @@
   "WebKit-Autoloader-Installer_v0.4.0.elf": {
     "download_count": 1,
     "deleted_at": "2026-09-30"
+  },
+  "CheatRunner_v0.17.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-01"
+  },
+  "pegasus-dl_v1.10.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-01"
+  },
+  "ps5upload_v5.39.1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-01"
+  },
+  "WebKit-Autoloader-Installer_v0.5.1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-01"
+  },
+  "zftpd_v1.5.0.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-01"
   }
 }
