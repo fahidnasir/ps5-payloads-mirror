@@ -12,6 +12,42 @@
     "checksum": "90db08434228a08554e06a949f26457fb25c9b607f126fa63616b8d261426dee"
   },
   {
+    "name": "CheatRunner",
+    "filename": "CheatRunner_v0.17.2.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/CheatRunner_v0.17.2.elf",
+    "source": "https://github.com/notmaj0r/CheatRunner/releases",
+    "source_direct": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.17.2/CheatRunner.elf",
+    "description": "Web-based game cheat trainer",
+    "last_update": "2026-10-01",
+    "version": "v0.17.2",
+    "category": "Utilities & Tools",
+    "checksum": "36ad03e236e6603aaaf05d95ed3399c7b54475a9bceba085cbe02899bc88ae0f"
+  },
+  {
+    "name": "Spectrum-Library",
+    "filename": "Spectrum-Library_1.4.8.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/Spectrum-Library_1.4.8.elf",
+    "source": "https://github.com/Phoenixx1202/Spectrum-Library/releases",
+    "source_direct": "https://github.com/Phoenixx1202/Spectrum-Library/releases/download/1.4.8/SpectrumLibrary_1.4.8.elf",
+    "description": "Spectrum Library",
+    "last_update": "2026-10-01",
+    "version": "1.4.8",
+    "category": "Utilities & Tools",
+    "checksum": "5d1372d48f76167e3f9e24b335cf571ea6e4b3960e6b7202d2802b0f78c3a519"
+  },
+  {
+    "name": "kylin-core-release",
+    "filename": "kylin-core-release_v2.0.0-community-lite.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/kylin-core-release_v2.0.0-community-lite.elf",
+    "source": "https://github.com/aydencharles/kylin-core-release/releases",
+    "source_direct": "https://github.com/aydencharles/kylin-core-release/releases/download/v2.0.0-community-lite/kylin-core.elf",
+    "description": "Kylin Core launcher",
+    "last_update": "2026-10-01",
+    "version": "v2.0.0-community-lite",
+    "category": "Loaders",
+    "checksum": "7f5245f2db67b131c6f9e991b731117c2c730923a9dd65a2d82b36f2e2b91545"
+  },
+  {
     "name": "WebKit-Autoloader-Installer",
     "filename": "WebKit-Autoloader-Installer_v0.5.2.elf",
     "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/WebKit-Autoloader-Installer_v0.5.2.elf",
@@ -34,18 +70,6 @@
     "version": "v1.10.1",
     "category": "Utilities & Tools",
     "checksum": "b24fdc62fc6cad14684b214a9c5be6c1221585afbf9493e387ab90f9dee21138"
-  },
-  {
-    "name": "CheatRunner",
-    "filename": "CheatRunner_v0.17.1.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/CheatRunner_v0.17.1.elf",
-    "source": "https://github.com/notmaj0r/CheatRunner/releases",
-    "source_direct": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.17.1/CheatRunner.elf",
-    "description": "Web-based game cheat trainer",
-    "last_update": "2026-09-30",
-    "version": "v0.17.1",
-    "category": "Utilities & Tools",
-    "checksum": "6863f06cb6ff41f846d84a0542c21469b52cacf55c9e6a0e2c74c114b3a55212"
   },
   {
     "name": "zftpd",
@@ -83,18 +107,6 @@
     "version": "v2.00",
     "category": "Utilities & Tools",
     "checksum": "b6fea71afb8937fcd1a933116c620e989acba25b7049eaeaa00cdc1bd604d686"
-  },
-  {
-    "name": "Spectrum-Library",
-    "filename": "Spectrum-Library_1.4.7.bin",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/Spectrum-Library_1.4.7.bin",
-    "source": "https://github.com/Phoenixx1202/Spectrum-Library/releases",
-    "source_direct": "https://github.com/Phoenixx1202/Spectrum-Library/releases/download/1.4.7/LegacyJB_1.1.bin",
-    "description": "Spectrum Library",
-    "last_update": "2026-09-27",
-    "version": "1.4.7",
-    "category": "Utilities & Tools",
-    "checksum": "9c7b60380153cda2eb4a6f20ddc46774a621706388714d0fd97b492a6152f751"
   },
   {
     "name": "elf-arsenal",
@@ -312,18 +324,6 @@
     "version": "v0.9",
     "category": "Networking & Servers",
     "checksum": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb"
-  },
-  {
-    "name": "kylin-core-release",
-    "filename": "kylin-core-release_v1.3.1-community-lite.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/kylin-core-release_v1.3.1-community-lite.elf",
-    "source": "https://github.com/aydencharles/kylin-core-release/releases",
-    "source_direct": "https://github.com/aydencharles/kylin-core-release/releases/download/v1.3.1-community-lite/kylin-core.elf",
-    "description": "Kylin Core launcher",
-    "last_update": "2026-06-19",
-    "version": "v1.3.1-community-lite",
-    "category": "Loaders",
-    "checksum": "90320a4169d61be6e168e605e59c4d8fc89fb978f1772f03c2011e7e8087b8a3"
   },
   {
     "name": "Lapy-JB-Daemon",
