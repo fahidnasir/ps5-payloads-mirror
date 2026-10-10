@@ -338,5 +338,13 @@
   "WebKit-Autoloader-Installer_v0.5.2.elf": {
     "download_count": 0,
     "deleted_at": "2026-10-09"
+  },
+  "pegasus-dl_v1.10.1.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-10"
+  },
+  "ps5upload_v6.5.1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-10"
   }
 }
