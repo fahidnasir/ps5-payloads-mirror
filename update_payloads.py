@@ -35,17 +35,27 @@ def get_repo_info(url):
         return domain, owner, repo
     return None, None, None
 
-def get_latest_release(domain, owner, repo):
+def get_latest_release(domain, owner, repo, prerelease=False):
+    # prerelease=True: newest release including pre-releases (beta/alpha channel)
     try:
         if domain == "github.com":
-            cmd = ["gh", "api", f"repos/{owner}/{repo}/releases/latest"]
+            endpoint = "releases?per_page=10" if prerelease else "releases/latest"
+            cmd = ["gh", "api", f"repos/{owner}/{repo}/{endpoint}"]
             result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-            return json.loads(result.stdout)
+            data = json.loads(result.stdout)
+            if prerelease:
+                data = next((r for r in data if not r.get("draft")), None)
+            return data
         else:
             api_url = f"https://{domain}/api/v1/repos/{owner}/{repo}/releases/latest"
+            if prerelease:
+                api_url = f"https://{domain}/api/v1/repos/{owner}/{repo}/releases?limit=10"
             req = urllib.request.Request(api_url, headers={'User-Agent': 'Mozilla/5.0'})
             with urllib.request.urlopen(req) as response:
-                return json.loads(response.read().decode('utf-8'))
+                data = json.loads(response.read().decode('utf-8'))
+            if prerelease:
+                data = next((r for r in data if not r.get("draft")), None)
+            return data
     except Exception as e:
         print(f"Error fetching {domain}/{owner}/{repo}: {e}")
         return None
@@ -81,7 +91,7 @@ def calculate_checksum(filepath):
         return None
 
 def reorder_item(item):
-    order = ["name", "filename", "url", "source", "source_direct", "asset_pattern", "extract_file", "description", "last_update", "version", "category", "checksum"]
+    order = ["name", "filename", "url", "source", "source_direct", "asset_pattern", "prerelease", "extract_file", "description", "last_update", "version", "category", "checksum"]
     new_item = {}
     for key in order:
         if key in item:
@@ -258,7 +268,7 @@ def update_payloads():
             continue
             
         print(f"Checking {owner}/{repo_name} on {domain}...")
-        release = get_latest_release(domain, owner, repo_name)
+        release = get_latest_release(domain, owner, repo_name, item.get("prerelease", False))
         if not release:
             continue
             

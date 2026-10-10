@@ -385,5 +385,45 @@
     "version": "2.5B",
     "category": "System & Jailbreak",
     "checksum": "4845cac45095361b8983b14d6690622183b0dcfbf6d7fda16e161aa91ff0531e"
+  },
+  {
+    "name": "ShadowMountPlus-beta",
+    "source": "https://github.com/drakmor/ShadowMountPlus/releases",
+    "extract_file": "shadowmountplus.elf",
+    "description": "A fully automated, background 'Auto-Mounter' payload for Jailbroken PlayStation 5 consoles. (Beta/pre-release channel.)",
+    "category": "Utilities & Tools",
+    "prerelease": true
+  },
+  {
+    "name": "onionHEN-beta",
+    "source": "https://github.com/aydencharles/onionHEN/releases",
+    "description": "OnionHEN (Beta/pre-release channel.)",
+    "category": "System & Jailbreak",
+    "prerelease": true
+  },
+  {
+    "name": "blackbox",
+    "source": "https://github.com/D3ATHLY/blackbox/releases",
+    "description": "Homebrew storefront and download manager for PS5.",
+    "category": "Utilities & Tools"
+  },
+  {
+    "name": "orbit-store",
+    "source": "https://github.com/saawant12/orbit-store-ps5/releases",
+    "description": "Download manager for PS5 with resumable downloads and phone controls (browser version).",
+    "category": "Networking & Servers"
+  },
+  {
+    "name": "ps-patch-system",
+    "source": "https://github.com/illusionyy/ps-patch-system/releases",
+    "description": "App patching system for PS5 using XML patch files, with local HTTP management UI.",
+    "category": "Utilities & Tools",
+    "asset_pattern": "^patch-bundle-prospero\\.elf$"
+  },
+  {
+    "name": "ProsperoMgr",
+    "source": "https://github.com/notmaj0r/ProsperoMgr/releases",
+    "description": "Web-based all-in-one homebrew manager for PS5.",
+    "category": "Utilities & Tools"
   }
 ]
