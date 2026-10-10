@@ -1,19 +1,23 @@
-import json
-import subprocess
-import re
+import argparse
 import hashlib
-import urllib.request
-import sys
+import json
 import os
-import zipfile
-import tempfile
+import re
 import shutil
+import subprocess
+import tempfile
+import urllib.request
+import zipfile
 from datetime import datetime
 
 JSON_FILE = "payloads.json"
 PAYLOADS_DIR = "payloads"
-BASE_URL = "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror"
+REPO = os.environ.get("GITHUB_REPOSITORY", "fahidnasir/ps5-payloads-mirror")
+RELEASE_TAG = "payloads-mirror"
+BASE_URL = f"https://github.com/{REPO}/releases/download/{RELEASE_TAG}"
 STATS_FILE = "download_stats.json"
+HTTP_TIMEOUT = 60
+USER_AGENT = {"User-Agent": "Mozilla/5.0"}
 
 def get_repo_info(url):
     # Extract domain, owner and repo from various Git URL formats
@@ -22,8 +26,7 @@ def get_repo_info(url):
         domain = match.group(1)
         owner = match.group(2)
         repo = match.group(3).rstrip('/')
-        if repo.endswith('.git'):
-            repo = repo[:-4]
+        repo = repo.removesuffix('.git')
         if repo == 'releases':
             parts = url.split('/')
             try:
@@ -50,8 +53,8 @@ def get_latest_release(domain, owner, repo, prerelease=False):
             api_url = f"https://{domain}/api/v1/repos/{owner}/{repo}/releases/latest"
             if prerelease:
                 api_url = f"https://{domain}/api/v1/repos/{owner}/{repo}/releases?limit=10"
-            req = urllib.request.Request(api_url, headers={'User-Agent': 'Mozilla/5.0'})
-            with urllib.request.urlopen(req) as response:
+            req = urllib.request.Request(api_url, headers=USER_AGENT)
+            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as response:
                 data = json.loads(response.read().decode('utf-8'))
             if prerelease:
                 data = next((r for r in data if not r.get("draft")), None)
@@ -63,14 +66,13 @@ def get_latest_release(domain, owner, repo, prerelease=False):
 def download_file(url, filename):
     if not os.path.exists(PAYLOADS_DIR):
         os.makedirs(PAYLOADS_DIR)
-    
+
     filepath = os.path.join(PAYLOADS_DIR, filename)
     print(f"  Downloading {filename}...")
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req) as response:
-            with open(filepath, 'wb') as f:
-                f.write(response.read())
+        req = urllib.request.Request(url, headers=USER_AGENT)
+        with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as response, open(filepath, 'wb') as f:
+            shutil.copyfileobj(response, f)
         return True
     except Exception as e:
         print(f"  Error downloading {filename}: {e}")
@@ -103,7 +105,7 @@ def reorder_item(item):
 
 def update_readme():
     try:
-        with open(JSON_FILE, "r") as f:
+        with open(JSON_FILE) as f:
             payloads = json.load(f)
     except FileNotFoundError:
         print(f"Error: {JSON_FILE} not found. Cannot update README.")
@@ -113,7 +115,7 @@ def update_readme():
         "| Payload | Version | Description | Last Updated | Source | Download |",
         "| --- | --- | --- | --- | --- | --- |"
     ]
-    
+
     for item in payloads:
         name = item.get("name", "Unknown")
         version = item.get("version", "Unknown")
@@ -121,15 +123,15 @@ def update_readme():
         last_update = item.get("last_update", "Unknown")
         source = item.get("source", "#")
         url = item.get("url", "#")
-        
+
         if not description:
             description = "No description provided."
-            
+
         table_rows.append(f"| **{name}** | `{version}` | {description} | `{last_update}` | [Source]({source}) | [Download]({url}) |")
-        
+
     table_content = "\n".join(table_rows)
     readme_path = "README.md"
-    
+
     template = f"""# PS5 Payloads Mirror
 
 This repository contains an automated mirror of useful payloads for the PlayStation 5.
@@ -151,12 +153,12 @@ If you have suggestions for a new payload to be added or if there's an important
             f.write(template)
     else:
         print(f"Updating {readme_path}...")
-        with open(readme_path, "r") as f:
+        with open(readme_path) as f:
             content = f.read()
-            
+
         start_marker = "<!-- PAYLOADS_START -->"
         end_marker = "<!-- PAYLOADS_END -->"
-        
+
         if start_marker in content and end_marker in content:
             pattern = re.compile(f"{start_marker}.*?{end_marker}", re.DOTALL)
             new_content = pattern.sub(f"{start_marker}\\n{table_content}\\n{end_marker}", content)
@@ -165,14 +167,12 @@ If you have suggestions for a new payload to be added or if there's an important
         else:
             print("Markers not found in README.md. Appending table at the end.")
             with open(readme_path, "a") as f:
-                f.write(f"\\n## Available Payloads\\n\\n{start_marker}\\n{table_content}\\n{end_marker}\\n")
+                f.write(f"\n## Available Payloads\n\n{start_marker}\n{table_content}\n{end_marker}\n")
 
 
 def get_mirror_assets():
-    owner = "fahidnasir"
-    repo = "ps5-payloads-mirror"
     try:
-        cmd = ["gh", "api", f"repos/{owner}/{repo}/releases/tags/payloads-mirror"]
+        cmd = ["gh", "api", f"repos/{REPO}/releases/tags/{RELEASE_TAG}"]
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode == 0:
             release_info = json.loads(result.stdout)
@@ -183,37 +183,38 @@ def get_mirror_assets():
 
 def cleanup_and_record_stats():
     print("\nChecking for stale release assets to record stats and clean up...")
-    owner = "fahidnasir"
-    repo = "ps5-payloads-mirror"
 
     try:
-        with open(JSON_FILE, "r") as f:
+        with open(JSON_FILE) as f:
             payloads = json.load(f)
         expected_files = {p["filename"] for p in payloads if "filename" in p}
-        
-        cmd = ["gh", "api", f"repos/{owner}/{repo}/releases/tags/payloads-mirror"]
+        if not expected_files:
+            print("  No filenames in payloads.json; refusing to delete anything.")
+            return
+
+        cmd = ["gh", "api", f"repos/{REPO}/releases/tags/{RELEASE_TAG}"]
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         release_info = json.loads(result.stdout)
-        
+
         assets = release_info.get("assets", [])
-        
+
         # Load existing stats
         stats = {}
         if os.path.exists(STATS_FILE):
             try:
-                with open(STATS_FILE, "r") as f:
+                with open(STATS_FILE) as f:
                     stats = json.load(f)
             except Exception:
                 pass
-                
+
         deleted_count = 0
         stats_updated = False
-        
+
         for asset in assets:
             asset_name = asset["name"]
             asset_id = asset["id"]
             download_count = asset.get("download_count", 0)
-            
+
             if asset_name not in expected_files:
                 print(f"  Recording stats for stale asset: {asset_name} (Downloads: {download_count})...")
                 stats[asset_name] = {
@@ -221,22 +222,22 @@ def cleanup_and_record_stats():
                     "deleted_at": datetime.now().strftime("%Y-%m-%d")
                 }
                 stats_updated = True
-                
+
                 print(f"  Removing stale asset: {asset_name} (ID: {asset_id})...")
-                del_cmd = ["gh", "api", "-X", "DELETE", f"repos/{owner}/{repo}/releases/assets/{asset_id}"]
+                del_cmd = ["gh", "api", "-X", "DELETE", f"repos/{REPO}/releases/assets/{asset_id}"]
                 subprocess.run(del_cmd, check=True)
                 print(f"  Successfully removed {asset_name}.")
                 deleted_count += 1
-                
+
         if stats_updated:
             with open(STATS_FILE, "w") as f:
                 json.dump(stats, f, indent=2)
-                
+
         if deleted_count == 0:
             print("  No stale assets to remove.")
         else:
             print(f"  Removed {deleted_count} stale assets and recorded their stats.")
-                
+
     except Exception as e:
         print(f"Error cleaning up release assets: {e}")
 
@@ -244,7 +245,7 @@ def cleanup_and_record_stats():
 def update_payloads():
     os.makedirs(PAYLOADS_DIR, exist_ok=True)
     try:
-        with open(JSON_FILE, "r") as f:
+        with open(JSON_FILE) as f:
             payloads = json.load(f)
     except FileNotFoundError:
         print(f"Error: {JSON_FILE} not found.")
@@ -262,38 +263,38 @@ def update_payloads():
                      item["url"] = f"{BASE_URL}/{item['filename']}"
                      updated = True
             continue
-            
+
         domain, owner, repo_name = get_repo_info(source)
         if not owner:
             continue
-            
+
         print(f"Checking {owner}/{repo_name} on {domain}...")
         release = get_latest_release(domain, owner, repo_name, item.get("prerelease", False))
         if not release:
             continue
-            
+
         assets = release.get("assets", [])
         if not assets:
             continue
-            
+
         asset_pattern = item.get("asset_pattern")
         has_extract = "extract_file" in item
         preferred_ext = ".bin" if "etaHEN" in repo_name else ".elf"
-        
-        def score_asset(name):
+
+        def score_asset(name, has_extract=has_extract, preferred_ext=preferred_ext, asset_pattern=asset_pattern):
             name_lower = name.lower()
-            
+
             # If we already have extract_file, we might be looking for a zip
             if has_extract and name.endswith(".zip"):
                 return 20
-                
+
             if not (name.endswith(".elf") or name.endswith(".bin") or (has_extract and name.endswith(".zip"))):
                 if not name.endswith(preferred_ext):
                     return -1
-            
+
             if asset_pattern and not re.search(asset_pattern, name, re.IGNORECASE):
                 return -1
-            
+
             score = 0
             if name.endswith(preferred_ext):
                 score += 5
@@ -303,7 +304,7 @@ def update_payloads():
                 score -= 10
             if "install" in name_lower:
                 score -= 5
-            score -= len(name) / 100.0 
+            score -= len(name) / 100.0
             return score
 
         selected_asset = None
@@ -313,35 +314,35 @@ def update_payloads():
             if score > best_score:
                 best_score = score
                 selected_asset = asset
-        
+
         if selected_asset and best_score > -1:
             gh_url = selected_asset["browser_download_url"]
             original_filename = selected_asset["name"]
             new_version = release["tag_name"]
             new_date = release["published_at"][:10]
             is_zip = original_filename.endswith(".zip")
-            
+
             proposed_name = repo_name
             final_name = item.get("name", proposed_name)
-            
+
             # Format: final_name_version.ext
             if is_zip:
                 ext = "elf"
             else:
                 ext = original_filename.rsplit('.', 1)[1] if '.' in original_filename else "bin"
-            
+
             new_filename = f"{final_name}_{new_version}.{ext}"
-            
+
             filepath = os.path.join(PAYLOADS_DIR, new_filename)
             needs_download = (
-                item.get("version") != new_version or 
+                item.get("version") != new_version or
                 item.get("filename") != new_filename or
                 new_filename not in mirror_assets
             )
-            
+
             if needs_download:
                 print(f"  Update found: {item.get('version', 'none')} -> {new_version}")
-                
+
                 # Delete old file
                 if item.get("filename") and item["filename"] != new_filename:
                     old_path = os.path.join(PAYLOADS_DIR, item["filename"])
@@ -351,18 +352,18 @@ def update_payloads():
 
                 success = False
                 extract_file = item.get("extract_file")
-                
+
                 if is_zip:
                     print(f"  Processing ZIP update: {original_filename}")
                     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
                         tmp_path = tmp_file.name
-                    
+
                     try:
-                        req = urllib.request.Request(gh_url, headers={'User-Agent': 'Mozilla/5.0'})
-                        with urllib.request.urlopen(req) as response:
+                        req = urllib.request.Request(gh_url, headers=USER_AGENT)
+                        with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as response:
                             with open(tmp_path, 'wb') as f:
-                                f.write(response.read())
-                        
+                                shutil.copyfileobj(response, f)
+
                         with zipfile.ZipFile(tmp_path, 'r') as z:
                             if not extract_file:
                                 elf_files = [f for f in z.namelist() if f.lower().endswith('.elf')]
@@ -370,14 +371,14 @@ def update_payloads():
                                     extract_file = elf_files[0]
                                     print(f"  Auto-detected internal file: {extract_file}")
                                 elif len(elf_files) > 1:
-                                    print(f"  Error: Multiple .elf files in zip and no extract_file in JSON.")
+                                    print("  Error: Multiple .elf files in zip and no extract_file in JSON.")
                                     os.remove(tmp_path)
                                     continue
                                 else:
-                                    print(f"  Error: No .elf files found in zip.")
+                                    print("  Error: No .elf files found in zip.")
                                     os.remove(tmp_path)
                                     continue
-                            
+
                             print(f"  Extracting {extract_file} to {new_filename}...")
                             with z.open(extract_file) as source_f, open(filepath, 'wb') as target_f:
                                 shutil.copyfileobj(source_f, target_f)
@@ -405,29 +406,43 @@ def update_payloads():
                         item["extract_file"] = extract_file
                     updated = True
                 else:
-                    print(f"  Skipping update due to download failure.")
+                    print("  Skipping update due to download failure.")
             else:
                 print(f"  Already up to date ({new_version})")
         else:
             print(f"  No suitable asset found for {source}")
-                
+
     for item in payloads:
         if item.get("filename"):
             item["url"] = f"{BASE_URL}/{item['filename']}"
-            
+
     payloads.sort(key=lambda x: x.get("last_update", ""), reverse=True)
     payloads = [reorder_item(p) for p in payloads]
-    
+
     with open(JSON_FILE, "w") as f:
         json.dump(payloads, f, indent=2)
-    
+
     if updated:
         print(f"\nSuccessfully updated files and sorted {JSON_FILE}")
     else:
         print(f"\nSorted {JSON_FILE} (no new files downloaded).")
-        
+
     update_readme()
-    cleanup_and_record_stats()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Mirror PS5 payloads from upstream releases.")
+    parser.add_argument(
+        "--cleanup",
+        action="store_true",
+        help="only delete stale release assets (run after uploading new ones)",
+    )
+    args = parser.parse_args()
+    if args.cleanup:
+        cleanup_and_record_stats()
+    else:
+        update_payloads()
+
 
 if __name__ == "__main__":
-    update_payloads()
+    main()

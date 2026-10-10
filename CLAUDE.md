@@ -31,8 +31,10 @@ metadata index and `README.md` table auto-generated from it.
    set `url` to mirror's release download URL.
 8. Sort payloads by `last_update` desc, rewrite `payloads.json`, regenerate README
    table between `<!-- PAYLOADS_START -->` / `<!-- PAYLOADS_END -->` markers.
-9. Cleanup: delete release assets not referenced by any current `filename`, log
-   their download_count + deletion date into `download_stats.json`.
+9. Cleanup (separate step, `python update_payloads.py --cleanup`, run by CI only
+   after upload): delete release assets not referenced by any current `filename`,
+   log their download_count + deletion date into `download_stats.json`. Never run
+   locally unless you want the live release pruned.
 
 Special case: `ps5debug`/no-`source` items skip version-check, just get url pointed
 at mirror if not already.
@@ -47,7 +49,8 @@ Two ways:
 2. **Manual**: append object to `payloads.json` with at least `source` (repo
    releases URL, e.g. `https://github.com/OWNER/REPO/releases`) and `name`. Leave
    `version`/`filename` unset — next `update_payloads.py` run will populate them.
-   Optional: `asset_pattern` (regex to disambiguate multi-asset releases),
+   Optional: `prerelease: true` (track newest release incl. pre-releases; use a
+   `-beta` named twin entry alongside the stable one), `asset_pattern` (regex to disambiguate multi-asset releases),
    `extract_file` (path inside zip to pull the .elf from), `category`.
 
 Either way, next scheduled/manual workflow run picks it up and does the actual
@@ -58,7 +61,8 @@ download + mirror + release upload.
 `.github/workflows/update_mirror.yml`:
 - Trigger: `cron: '0 0 * * *'` (daily midnight UTC) + `workflow_dispatch` (manual
   button in Actions tab).
-- Runs `update_payloads.py`, creates/reuses `payloads-mirror` release, uploads
+- `ci.yml` (push/PR): ruff + `validate_payloads.py`.
+- Runs `validate_payloads.py`, `update_payloads.py`, creates/reuses `payloads-mirror` release, uploads
   changed payload binaries with `gh release upload --clobber`, commits
   `payloads.json`/`README.md`/`download_stats.json` back with
   `github-actions[bot]` identity, pushes.
