@@ -1,15 +1,28 @@
 [
   {
     "name": "ps5upload",
-    "filename": "ps5upload_v6.8.2.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v6.8.2.elf",
+    "filename": "ps5upload_v7.0.1.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v7.0.1.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.8.2/ps5upload-6.8.2.elf",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.1/ps5upload-7.0.1.elf",
     "description": "Fast, reliable transfers from your computer to your PS5 (requires PC app)",
-    "last_update": "2026-10-10",
-    "version": "v6.8.2",
+    "last_update": "2026-10-11",
+    "version": "v7.0.1",
     "category": "Networking & Servers",
-    "checksum": "e9cb922ea48f3e8007aefd2862c2d41dd522eea11a92c846b136333ab37e9e0d"
+    "checksum": "cf37ffb531a7dd56fb78d72eb01b5ec44fed40959504581a432b49a8d8352291"
+  },
+  {
+    "name": "ps-patch-system",
+    "filename": "ps-patch-system_38108724867.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps-patch-system_38108724867.elf",
+    "source": "https://github.com/illusionyy/ps-patch-system/releases",
+    "source_direct": "https://github.com/illusionyy/ps-patch-system/releases/download/38108724867/patch-bundle-prospero.elf",
+    "asset_pattern": "^patch-bundle-prospero\\.elf$",
+    "description": "App patching system for PS5 using XML patch files, with local HTTP management UI.",
+    "last_update": "2026-10-11",
+    "version": "38108724867",
+    "category": "Utilities & Tools",
+    "checksum": "46037f9c6fe63001f8a7ff90faffe90edac6f36220c8ab32310f3b88eb5074cf"
   },
   {
     "name": "CheatRunner",
@@ -25,16 +38,16 @@
   },
   {
     "name": "ShadowMountPlus",
-    "filename": "ShadowMountPlus_1.7beta5.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus_1.7beta5.elf",
+    "filename": "ShadowMountPlus_1.7-beta5fix1.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus_1.7-beta5fix1.elf",
     "source": "https://github.com/drakmor/ShadowMountPlus/releases",
-    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta5/ShadowMountPlus_1.7beta5.zip",
+    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/ShadowMountPlus_1.7-beta5fix1.zip",
     "extract_file": "shadowmountplus.elf",
     "description": "A fully automated, background 'Auto-Mounter' payload for Jailbroken PlayStation 5 consoles.",
     "last_update": "2026-10-10",
-    "version": "1.7beta5",
+    "version": "1.7-beta5fix1",
     "category": "Utilities & Tools",
-    "checksum": "0d54a8467ec3544e1c7b365c9f100b2bf42bf4633cb768bde7c8f16b6cfb5375"
+    "checksum": "e85fd63b705498488f39c09c9aea6f9fa22e0df2e932865de49a8cedf25172d5"
   },
   {
     "name": "ShadowMountPlus-beta",
@@ -49,6 +62,18 @@
     "version": "1.7beta5",
     "category": "Utilities & Tools",
     "checksum": "0d54a8467ec3544e1c7b365c9f100b2bf42bf4633cb768bde7c8f16b6cfb5375"
+  },
+  {
+    "name": "orbit-store",
+    "filename": "orbit-store_v1.1.0.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.1.0.elf",
+    "source": "https://github.com/saawant12/orbit-store-ps5/releases",
+    "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.1.0/orbit_store.elf",
+    "description": "Download manager for PS5 with resumable downloads and phone controls (browser version).",
+    "last_update": "2026-10-10",
+    "version": "v1.1.0",
+    "category": "Networking & Servers",
+    "checksum": "e7afcd24678828436efc3aa3d58bb88cd0165f7dc39e72fb1ae60cf64037b986"
   },
   {
     "name": "pegasus-dl",
@@ -75,18 +100,6 @@
     "checksum": "b78ad32a58aa219c089fb2d809dbdfe84041ae88f7a2890e589ee003ea8d908b"
   },
   {
-    "name": "orbit-store",
-    "filename": "orbit-store_v1.0.5.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.0.5.elf",
-    "source": "https://github.com/saawant12/orbit-store-ps5/releases",
-    "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.0.5/orbit_store.elf",
-    "description": "Download manager for PS5 with resumable downloads and phone controls (browser version).",
-    "last_update": "2026-10-09",
-    "version": "v1.0.5",
-    "category": "Networking & Servers",
-    "checksum": "7883cf64b62252594d58e5558ea29f8de7ed3ca1d9a3182c844f23513eaf7617"
-  },
-  {
     "name": "WebKit-Autoloader-Installer",
     "filename": "WebKit-Autoloader-Installer_v0.6.1.elf",
     "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/WebKit-Autoloader-Installer_v0.6.1.elf",
@@ -110,19 +123,6 @@
     "version": "v0.9.0-beta2",
     "category": "System & Jailbreak",
     "checksum": "dd2e78af126d9d115df147a0f2bff6269de7a3eee5a556e06b6c21726a36f087"
-  },
-  {
-    "name": "ps-patch-system",
-    "filename": "ps-patch-system_37549880588.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps-patch-system_37549880588.elf",
-    "source": "https://github.com/illusionyy/ps-patch-system/releases",
-    "source_direct": "https://github.com/illusionyy/ps-patch-system/releases/download/37549880588/patch-bundle-prospero.elf",
-    "asset_pattern": "^patch-bundle-prospero\\.elf$",
-    "description": "App patching system for PS5 using XML patch files, with local HTTP management UI.",
-    "last_update": "2026-10-07",
-    "version": "37549880588",
-    "category": "Utilities & Tools",
-    "checksum": "8571bef431d4b6cc7856f43cbfeefbbfdbffc9763f66f611461448de80bcff8b"
   },
   {
     "name": "ps5-web-file-manager",

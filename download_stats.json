@@ -346,5 +346,21 @@
   "ps5upload_v6.5.1.elf": {
     "download_count": 0,
     "deleted_at": "2026-10-10"
+  },
+  "orbit-store_v1.0.5.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-11"
+  },
+  "ps-patch-system_37549880588.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-11"
+  },
+  "ps5upload_v6.8.2.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-11"
+  },
+  "ShadowMountPlus_1.7beta5.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-11"
   }
 }
