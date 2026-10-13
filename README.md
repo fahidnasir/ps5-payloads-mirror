@@ -7,7 +7,7 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 <!-- PAYLOADS_START -->
 | Payload | Version | Description | Last Updated | Source | Download |
 | --- | --- | --- | --- | --- | --- |
-| **ps5upload** | `v7.0.13` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-10-12` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v7.0.13.elf) |
+| **ps5upload** | `v7.0.22` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-10-12` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v7.0.22.elf) |
 | **ps-patch-system** | `38108724867` | App patching system for PS5 using XML patch files, with local HTTP management UI. | `2026-10-11` | [Source](https://github.com/illusionyy/ps-patch-system/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps-patch-system_38108724867.elf) |
 | **orbit-store** | `v1.2.0` | Download manager for PS5 with resumable downloads and phone controls (browser version). | `2026-10-11` | [Source](https://github.com/saawant12/orbit-store-ps5/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.2.0.elf) |
 | **CheatRunner** | `v0.18` | Web-based game cheat trainer | `2026-10-10` | [Source](https://github.com/notmaj0r/CheatRunner/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/CheatRunner_v0.18.elf) |
