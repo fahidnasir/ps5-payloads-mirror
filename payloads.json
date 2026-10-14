@@ -1,5 +1,41 @@
 [
   {
+    "name": "blackbox",
+    "filename": "blackbox_1.0.9.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.0.9.elf",
+    "source": "https://github.com/D3ATHLY/blackbox/releases",
+    "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/1.0.9/blackbox.elf",
+    "description": "Homebrew storefront and download manager for PS5.",
+    "last_update": "2026-10-14",
+    "version": "1.0.9",
+    "category": "Utilities & Tools",
+    "checksum": "2b104ec3ad3bb0861c8d43d9e17fec3295cf8d32f0b5b9f68863e329fe10363c"
+  },
+  {
+    "name": "orbit-store",
+    "filename": "orbit-store_v1.3.0.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.3.0.elf",
+    "source": "https://github.com/saawant12/orbit-store-ps5/releases",
+    "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.3.0/orbit_store.elf",
+    "description": "Download manager for PS5 with resumable downloads and phone controls (browser version).",
+    "last_update": "2026-10-13",
+    "version": "v1.3.0",
+    "category": "Networking & Servers",
+    "checksum": "553b39e7503ec141f6a015b7939c83e93fe8f05dee176e42c7e3bc026b0ea519"
+  },
+  {
+    "name": "pldmgr",
+    "filename": "pldmgr_v0.6.0.elf",
+    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/pldmgr_v0.6.0.elf",
+    "source": "https://github.com/itsPLK/pldmgr/releases",
+    "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.0/pldmgr_v0.6.0.elf",
+    "description": "A modern, web-based dashboard to easily manage, import, and automatically load payloads on your PS5.",
+    "last_update": "2026-10-13",
+    "version": "v0.6.0",
+    "category": "Utilities & Tools",
+    "checksum": "5b31079d81d6467f2754edd1d6dbe63b0306502e135c21a425ecb263e39e2059"
+  },
+  {
     "name": "ps5upload",
     "filename": "ps5upload_v7.0.22.elf",
     "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v7.0.22.elf",
@@ -23,18 +59,6 @@
     "version": "38108724867",
     "category": "Utilities & Tools",
     "checksum": "46037f9c6fe63001f8a7ff90faffe90edac6f36220c8ab32310f3b88eb5074cf"
-  },
-  {
-    "name": "orbit-store",
-    "filename": "orbit-store_v1.2.0.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.2.0.elf",
-    "source": "https://github.com/saawant12/orbit-store-ps5/releases",
-    "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.2.0/orbit_store.elf",
-    "description": "Download manager for PS5 with resumable downloads and phone controls (browser version).",
-    "last_update": "2026-10-11",
-    "version": "v1.2.0",
-    "category": "Networking & Servers",
-    "checksum": "86778d4fa830b1ff46379d167568c32294764cb05bc06ce6b05edc9db2a91691"
   },
   {
     "name": "CheatRunner",
@@ -86,18 +110,6 @@
     "version": "v1.11.0",
     "category": "Utilities & Tools",
     "checksum": "32b69c2089bb545abfabd04d5827444698f9c4f1bc4915d72247cb781e8c23d9"
-  },
-  {
-    "name": "blackbox",
-    "filename": "blackbox_v1.0.8.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_v1.0.8.elf",
-    "source": "https://github.com/D3ATHLY/blackbox/releases",
-    "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/v1.0.8/blackbox.elf",
-    "description": "Homebrew storefront and download manager for PS5.",
-    "last_update": "2026-10-09",
-    "version": "v1.0.8",
-    "category": "Utilities & Tools",
-    "checksum": "b78ad32a58aa219c089fb2d809dbdfe84041ae88f7a2890e589ee003ea8d908b"
   },
   {
     "name": "WebKit-Autoloader-Installer",
@@ -184,18 +196,6 @@
     "version": "v1.6.0",
     "category": "Networking & Servers",
     "checksum": "fc59b60aab2dce9a8bae385c106bfa174048d765c826101355f1f010a789b497"
-  },
-  {
-    "name": "pldmgr",
-    "filename": "pldmgr_v0.5.2.elf",
-    "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/pldmgr_v0.5.2.elf",
-    "source": "https://github.com/itsPLK/pldmgr/releases",
-    "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.5.2/pldmgr_v0.5.2.elf",
-    "description": "A modern, web-based dashboard to easily manage, import, and automatically load payloads on your PS5.",
-    "last_update": "2026-09-29",
-    "version": "v0.5.2",
-    "category": "Utilities & Tools",
-    "checksum": "62b3ba2a4937c2afc502f9a4e7242cca538610ebb4ae2800c7c6f72e7f268e7c"
   },
   {
     "name": "ProsperoMgr",

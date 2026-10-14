@@ -374,5 +374,17 @@
   "ps5upload_v7.0.13.elf": {
     "download_count": 0,
     "deleted_at": "2026-10-13"
+  },
+  "blackbox_v1.0.8.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-14"
+  },
+  "orbit-store_v1.2.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-14"
+  },
+  "pldmgr_v0.5.2.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-14"
   }
 }
