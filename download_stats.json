@@ -394,5 +394,17 @@
   "pldmgr_v0.6.0.elf": {
     "download_count": 0,
     "deleted_at": "2026-10-15"
+  },
+  "onionHEN-beta_v0.9.0-beta2.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "onionHEN_v0.0.13.elf": {
+    "download_count": 2,
+    "deleted_at": "2026-10-15"
+  },
+  "ps5upload_v7.0.22.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
   }
 }
