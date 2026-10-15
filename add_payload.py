@@ -8,11 +8,10 @@ import tempfile
 import urllib.request
 import zipfile
 
-from update_payloads import update_readme
+from catalog import ensure_metadata, load_catalog, prune_icons, save_catalog
+from update_payloads import BASE_URL, enrich_item, ensure_icon, update_readme
 
-JSON_FILE = "payloads.json"
 PAYLOADS_DIR = "payloads"
-BASE_URL = "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror"
 
 def get_repo_info(url):
     match = re.search(r"https?://([^/]+)/([^/]+)/([^/]+)", url)
@@ -52,17 +51,6 @@ def calculate_checksum(filepath):
         print(f"  Error calculating checksum: {e}")
         return None
 
-def reorder_item(item):
-    order = ["name", "filename", "url", "source", "source_direct", "asset_pattern", "prerelease", "extract_file", "description", "last_update", "version", "category", "checksum"]
-    new_item = {}
-    for key in order:
-        if key in item:
-            new_item[key] = item[key]
-    for key in item:
-        if key not in new_item:
-            new_item[key] = item[key]
-    return new_item
-
 def add_payload():
     print("Add New PS5 Payload (Auto-download)")
     print("-" * 20)
@@ -80,8 +68,7 @@ def add_payload():
     description = input("Description (optional): ").strip()
 
     try:
-        with open(JSON_FILE) as f:
-            payloads = json.load(f)
+        payloads = load_catalog()
     except FileNotFoundError:
         payloads = []
 
@@ -225,14 +212,15 @@ def add_payload():
         if extract_file:
             new_item["extract_file"] = extract_file
 
+        enrich_item(new_item, release, domain, owner, repo, refresh_notes=True)
+        ensure_metadata(new_item)
         payloads.append(new_item)
+        ensure_icon(new_item, payloads)
         payloads.sort(key=lambda x: x.get("last_update", ""), reverse=True)
-        payloads = [reorder_item(p) for p in payloads]
+        save_catalog(payloads)
+        prune_icons(payloads)
 
-        with open(JSON_FILE, "w") as f:
-            json.dump(payloads, f, indent=2)
-
-        print(f"\nSuccessfully added and downloaded {repo} to {JSON_FILE}")
+        print(f"\nSuccessfully added and downloaded {repo} to payloads.json")
         update_readme()
     else:
         print("\nFailed to download the payload.")

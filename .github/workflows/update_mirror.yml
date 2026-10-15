@@ -27,8 +27,13 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate payloads.json
-        run: python validate_payloads.py
+      - name: Install dependencies
+        run: pip install pillow
+
+      - name: Test and validate catalog
+        run: |
+          python -m unittest discover -s tests
+          python validate_payloads.py
 
       - name: Run Payloads Update Script
         run: python update_payloads.py
@@ -53,7 +58,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add payloads.json README.md download_stats.json
+          git add payloads.json payloads_v2.json icons.json README.md download_stats.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0

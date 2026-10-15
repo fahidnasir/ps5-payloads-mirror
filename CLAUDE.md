@@ -6,12 +6,20 @@ metadata index and `README.md` table auto-generated from it.
 
 ## Files
 
-- `payloads.json` — source of truth. List of payload entries (name, filename, url,
+- `payloads.json` — source of truth (legacy bare array). `payloads_v2.json` is the same list wrapped as
+  `{name, icons_url, payloads}` for pldmgr (written together by `catalog.save_catalog`). `icons.json` holds
+  content-addressed icon data URIs (`icon_key` = sha256 of data, shared across entries/versions).
+  Entries also carry pldmgr fields `id`, `author`, `details_url`, `release_notes` (auto-filled).
+  Spec: https://github.com/itsPLK/ps5-payload-manager/blob/main/CUSTOM_REPOSITORIES.md List of payload entries (name, filename, url,
   source, source_direct, version, category, checksum, etc).
 - `update_payloads.py` — runs on schedule. For each entry with a `source`, checks
   upstream latest GitHub/Gitea release, downloads new asset if version changed,
   re-uploads to `payloads-mirror` release, updates `payloads.json`, regenerates
   README table, deletes stale release assets (recording download stats first).
+- `catalog.py` — load/save catalog + icons, shared helpers. `icon_utils.py`/`set_icon.py` — convert and set
+  icons by hand (`python set_icon.py`; needs Pillow). New entries auto-get an icon: twin's, upstream
+  repo asset/owner avatar, else generated monogram.
+- `validate_payloads.py`, `tests/` — checks run by CI.
 - `add_payload.py` — interactive CLI to add a new payload entry (prompts for URL,
   description, category; auto-detects latest release asset).
 - `download_stats.json` — download counts of removed/stale assets, recorded before

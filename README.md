@@ -7,17 +7,18 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 <!-- PAYLOADS_START -->
 | Payload | Version | Description | Last Updated | Source | Download |
 | --- | --- | --- | --- | --- | --- |
+| **ps5upload** | `v7.0.23` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-10-15` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v7.0.23.elf) |
+| **onionHEN-beta** | `v0.9.0` | OnionHEN (Beta/pre-release channel.) | `2026-10-15` | [Source](https://github.com/aydencharles/onionHEN/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_v0.9.0.elf) |
+| **onionHEN** | `v0.9.0` | OnionHEN | `2026-10-15` | [Source](https://github.com/aydencharles/onionHEN/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN_v0.9.0.elf) |
 | **blackbox** | `1.0.9` | Homebrew storefront and download manager for PS5. | `2026-10-14` | [Source](https://github.com/D3ATHLY/blackbox/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.0.9.elf) |
 | **orbit-store** | `v1.3.5` | Download manager for PS5 with resumable downloads and phone controls (browser version). | `2026-10-14` | [Source](https://github.com/saawant12/orbit-store-ps5/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.3.5.elf) |
 | **pldmgr** | `v0.6.1` | A modern, web-based dashboard to easily manage, import, and automatically load payloads on your PS5. | `2026-10-14` | [Source](https://github.com/itsPLK/pldmgr/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/pldmgr_v0.6.1.elf) |
-| **ps5upload** | `v7.0.22` | Fast, reliable transfers from your computer to your PS5 (requires PC app) | `2026-10-12` | [Source](https://github.com/phantomptr/ps5upload/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5upload_v7.0.22.elf) |
 | **ps-patch-system** | `38108724867` | App patching system for PS5 using XML patch files, with local HTTP management UI. | `2026-10-11` | [Source](https://github.com/illusionyy/ps-patch-system/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps-patch-system_38108724867.elf) |
 | **CheatRunner** | `v0.18` | Web-based game cheat trainer | `2026-10-10` | [Source](https://github.com/notmaj0r/CheatRunner/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/CheatRunner_v0.18.elf) |
 | **ShadowMountPlus** | `1.7-beta5fix1` | A fully automated, background 'Auto-Mounter' payload for Jailbroken PlayStation 5 consoles. | `2026-10-10` | [Source](https://github.com/drakmor/ShadowMountPlus/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus_1.7-beta5fix1.elf) |
 | **ShadowMountPlus-beta** | `1.7beta5` | A fully automated, background 'Auto-Mounter' payload for Jailbroken PlayStation 5 consoles. (Beta/pre-release channel.) | `2026-10-10` | [Source](https://github.com/drakmor/ShadowMountPlus/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus-beta_1.7beta5.elf) |
 | **pegasus-dl** | `v1.11.0` | Pegasus DL | `2026-10-09` | [Source](https://github.com/pegasus-ps5/pegasus-dl/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/pegasus-dl_v1.11.0.elf) |
 | **WebKit-Autoloader-Installer** | `v0.6.1` | Installs WebKit Autoloader on homescreen (FW 1.00-5.50 & 7.00-12.70) | `2026-10-08` | [Source](https://github.com/itsPLK/ps5-webkit-autoloader/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/WebKit-Autoloader-Installer_v0.6.1.elf) |
-| **onionHEN-beta** | `v0.9.0-beta2` | OnionHEN (Beta/pre-release channel.) | `2026-10-07` | [Source](https://github.com/aydencharles/onionHEN/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_v0.9.0-beta2.elf) |
 | **ps5-web-file-manager** | `v1.10` | A file manager for PS5 with a web UI | `2026-10-05` | [Source](https://github.com/owendswang/ps5-web-file-manager/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5-web-file-manager_v1.10.elf) |
 | **ps5-app-dumper** | `v2.10` | A small utility to dump PS5 application files from the console's pfsmnt to a connected USB storage device. | `2026-10-03` | [Source](https://github.com/EchoStretch/ps5-app-dumper/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5-app-dumper_v2.10.elf) |
 | **Spectrum-Library** | `1.4.8` | Spectrum Library | `2026-10-01` | [Source](https://github.com/Phoenixx1202/Spectrum-Library/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/Spectrum-Library_1.4.8.elf) |
@@ -29,7 +30,6 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 | **kstuff-lite** | `v1.11` | Lite version of kstuff | `2026-09-20` | [Source](https://github.com/EchoStretch/kstuff-lite/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/kstuff-lite_v1.11.elf) |
 | **ftpsrv-drakmor** | `1.16-ng-stable` | drakmor's fork of ftpsrv | `2026-09-20` | [Source](https://github.com/drakmor/ftpsrv/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ftpsrv-drakmor_1.16-ng-stable.elf) |
 | **garlic-savemgr** | `v1.13.1` | PS5 save decrypt/encrypt/browse with embedded web UI. | `2026-09-19` | [Source](https://git.etawen.dev/earthonion/garlic-savemgr/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/garlic-savemgr_v1.13.1.elf) |
-| **onionHEN** | `v0.0.13` | OnionHEN | `2026-09-11` | [Source](https://github.com/aydencharles/onionHEN/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN_v0.0.13.elf) |
 | **ps5-linux-loader** | `v2.5` | Linux payload implementing HV exploits to run a custom bootloader | `2026-09-05` | [Source](https://github.com/ps5-linux/ps5-linux-loader/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ps5-linux-loader_v2.5.elf) |
 | **elfldr** | `v0.26` | An ELF loader for jailbroken PS5s that accepts payloads on port 9021 | `2026-08-29` | [Source](https://github.com/ps5-payload-dev/elfldr/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/elfldr_v0.26.elf) |
 | **apr-emu-updater** | `v2.0.6` | APR emulator updater | `2026-08-29` | [Source](https://github.com/tsuramatsu1/apr-emu-updater/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/apr-emu-updater_v2.0.6.elf) |
@@ -46,6 +46,16 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 | **kstuff** | `v1.6.7` | Dynamically patches the PS5 kernel to bypass security | `2026-01-04` | [Source](https://github.com/EchoStretch/kstuff/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/kstuff_v1.6.7.elf) |
 | **etaHEN** | `2.5B` | AIO HEN payload | `2025-12-25` | [Source](https://github.com/etaHEN/etaHEN/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/etaHEN_2.5B.bin) |
 <!-- PAYLOADS_END -->
+
+## Use with PS5 Payload Manager
+
+In [pldmgr](https://github.com/itsPLK/ps5-payload-manager) open **Settings → Manage Sources → Add Source** and paste:
+
+```
+https://raw.githubusercontent.com/fahidnasir/ps5-payloads-mirror/main/payloads_v2.json
+```
+
+`payloads_v2.json` carries icons (`icons.json`), authors, details and release notes. Older manager versions can use the legacy `payloads.json` (plain array, no icons).
 
 ## Support & Suggestions
 

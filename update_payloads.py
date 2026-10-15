@@ -10,7 +10,18 @@ import urllib.request
 import zipfile
 from datetime import datetime
 
-JSON_FILE = "payloads.json"
+from catalog import (
+    JSON_FILE,
+    assign_icon,
+    ensure_metadata,
+    load_catalog,
+    load_icons,
+    make_icon,
+    prune_icons,
+    save_catalog,
+    truncate_utf8,
+)
+
 PAYLOADS_DIR = "payloads"
 REPO = os.environ.get("GITHUB_REPOSITORY", "fahidnasir/ps5-payloads-mirror")
 RELEASE_TAG = "payloads-mirror"
@@ -92,21 +103,9 @@ def calculate_checksum(filepath):
         print(f"  Error calculating checksum: {e}")
         return None
 
-def reorder_item(item):
-    order = ["name", "filename", "url", "source", "source_direct", "asset_pattern", "prerelease", "extract_file", "description", "last_update", "version", "category", "checksum"]
-    new_item = {}
-    for key in order:
-        if key in item:
-            new_item[key] = item[key]
-    for key in item:
-        if key not in new_item:
-            new_item[key] = item[key]
-    return new_item
-
 def update_readme():
     try:
-        with open(JSON_FILE) as f:
-            payloads = json.load(f)
+        payloads = load_catalog()
     except FileNotFoundError:
         print(f"Error: {JSON_FILE} not found. Cannot update README.")
         return
@@ -185,8 +184,7 @@ def cleanup_and_record_stats():
     print("\nChecking for stale release assets to record stats and clean up...")
 
     try:
-        with open(JSON_FILE) as f:
-            payloads = json.load(f)
+        payloads = load_catalog()
         expected_files = {p["filename"] for p in payloads if "filename" in p}
         if not expected_files:
             print("  No filenames in payloads.json; refusing to delete anything.")
@@ -242,11 +240,54 @@ def cleanup_and_record_stats():
         print(f"Error cleaning up release assets: {e}")
 
 
+def get_readme_url(owner, repo):
+    """Raw README URL (GitHub only); pldmgr fetches it for the payload details view."""
+    cmd = ["gh", "api", f"repos/{owner}/{repo}/readme", "--jq", ".download_url"]
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
+    url = result.stdout.strip()
+    return url if result.returncode == 0 and url.startswith("https://") else None
+
+
+def enrich_item(item, release, domain, owner, repo, refresh_notes=False):
+    """Set pldmgr catalog fields: author, release_notes, details_url. Backfills missing ones."""
+    item["author"] = owner
+    notes = truncate_utf8(release.get("body"))
+    if notes and (refresh_notes or "release_notes" not in item):
+        item["release_notes"] = notes
+    elif refresh_notes:
+        item.pop("release_notes", None)
+    if domain == "github.com" and "details_url" not in item:
+        url = get_readme_url(owner, repo)
+        if url:
+            item["details_url"] = url
+
+
+def ensure_icon(item, payloads):
+    """Give the item an icon: reuse a twin's, else upstream repo/avatar image, else a monogram."""
+    if item.get("icon_key") in load_icons():
+        return
+    item.pop("icon_key", None)
+    for other in payloads:
+        if other is not item and other.get("source") == item.get("source") and other.get("icon_key") in load_icons():
+            item["icon_key"] = other["icon_key"]
+            return
+    try:
+        # Pillow is optional; set_icon/icon_utils need it to resize upstream images.
+        from icon_utils import convert_image_to_data_uri
+        from set_icon import get_suggested_icon
+
+        suggestion = get_suggested_icon(item)
+        assign_icon(item, convert_image_to_data_uri(suggestion))
+        print(f"  Icon for {item['name']}: {suggestion}")
+    except Exception as e:  # network, decode or missing-Pillow errors all mean: use the fallback
+        print(f"  No upstream icon for {item['name']} ({e}); using generated monogram")
+        assign_icon(item, make_icon(item["name"]))
+
+
 def update_payloads():
     os.makedirs(PAYLOADS_DIR, exist_ok=True)
     try:
-        with open(JSON_FILE) as f:
-            payloads = json.load(f)
+        payloads = load_catalog()
     except FileNotFoundError:
         print(f"Error: {JSON_FILE} not found.")
         return
@@ -404,11 +445,13 @@ def update_payloads():
                     item["checksum"] = calculate_checksum(filepath)
                     if extract_file and is_zip:
                         item["extract_file"] = extract_file
+                    enrich_item(item, release, domain, owner, repo_name, refresh_notes=True)
                     updated = True
                 else:
                     print("  Skipping update due to download failure.")
             else:
                 print(f"  Already up to date ({new_version})")
+                enrich_item(item, release, domain, owner, repo_name)
         else:
             print(f"  No suitable asset found for {source}")
 
@@ -416,11 +459,14 @@ def update_payloads():
         if item.get("filename"):
             item["url"] = f"{BASE_URL}/{item['filename']}"
 
+    for item in payloads:
+        ensure_metadata(item)
+        ensure_icon(item, payloads)
     payloads.sort(key=lambda x: x.get("last_update", ""), reverse=True)
-    payloads = [reorder_item(p) for p in payloads]
-
-    with open(JSON_FILE, "w") as f:
-        json.dump(payloads, f, indent=2)
+    save_catalog(payloads)
+    removed = prune_icons(payloads)
+    if removed:
+        print(f"Pruned {removed} unused icons")
 
     if updated:
         print(f"\nSuccessfully updated files and sorted {JSON_FILE}")

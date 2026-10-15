@@ -20,5 +20,9 @@ jobs:
           python-version: '3.12'
       - name: Lint
         run: pipx run ruff check .
-      - name: Validate payloads.json
+      - name: Install dependencies
+        run: pip install pillow
+      - name: Unit tests
+        run: python -m unittest discover -s tests
+      - name: Validate catalog
         run: python validate_payloads.py
