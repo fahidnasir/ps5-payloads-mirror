@@ -406,5 +406,101 @@
   "ps5upload_v7.0.22.elf": {
     "download_count": 0,
     "deleted_at": "2026-10-15"
+  },
+  "BackPork_0.1.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "BFpilot_v0.4.4.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "CheatRunner_v0.18.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "elfldr_v0.26.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "etaHEN_2.5B.bin": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "ftpsrv-drakmor_1.16-ng-stable.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "ftpsrv_v0.21.1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "garlic-savemgr_v1.13.1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "klogsrv_v0.9.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "kstuff-lite_v1.11.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "Lapy-JB-Daemon_v1.2.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "nanoDNS_0.4.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "onionHEN_v0.9.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "pldmgr_v0.6.1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "ps-patch-system_38108724867.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "ps5-app-dumper_v2.10.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "ps5-linux-loader_v2.5.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "ps5-web-file-manager_v1.10.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "ps5upload_v7.0.23.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "ShadowMountPlus_1.7-beta5fix1.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
+  },
+  "shsrv_v0.20.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "WebKit-Autoloader-Installer_v0.6.1.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "websrv_v0.34.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-15"
+  },
+  "zftpd_v1.6.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-15"
   }
 }
