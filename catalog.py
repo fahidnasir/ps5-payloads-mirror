@@ -13,8 +13,8 @@ from colorsys import hls_to_rgb
 from pathlib import Path
 from zlib import crc32
 
-CATALOG = Path('payloads.json')  # legacy bare array, for older pldmgr versions
-CATALOG_V2 = Path('payloads_v2.json')  # object wrapper with icons_url
+CATALOG = Path('payloads.json')  # object wrapper with icons_url (a bare array would show no icons)
+CATALOG_V2 = Path('payloads_v2.json')  # identical copy; pldmgr's default source URL scheme tries this first
 ICONS = Path('icons.json')
 JSON_FILE = str(CATALOG)
 CATALOG_NAME = 'PS5 Payloads Mirror'
@@ -62,12 +62,15 @@ def reorder_item(item):
 
 
 def save_catalog(payloads):
-    atomic_json(CATALOG, payloads)
-    atomic_json(CATALOG_V2, {
+    # Both files carry icons_url: users may have added either URL as a source, and a bare
+    # array has no way to reference icons.
+    catalog = {
         'name': CATALOG_NAME,
         'icons_url': ICONS.name,
         'payloads': payloads,
-    })
+    }
+    atomic_json(CATALOG, catalog)
+    atomic_json(CATALOG_V2, catalog)
 
 
 def load_icons():

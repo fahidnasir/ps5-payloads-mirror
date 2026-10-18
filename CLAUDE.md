@@ -6,8 +6,10 @@ metadata index and `README.md` table auto-generated from it.
 
 ## Files
 
-- `payloads.json` — source of truth (legacy bare array). `payloads_v2.json` is the same list wrapped as
-  `{name, icons_url, payloads}` for pldmgr (written together by `catalog.save_catalog`). `icons.json` holds
+- `payloads.json` — source of truth (wrapper `{name, icons_url, payloads}`). `payloads_v2.json` is an identical copy (both
+  written by `catalog.save_catalog`). Must stay a wrapper: a bare array has no `icons_url`, so pldmgr shows no icons.
+  Categories: reuse the original's four (Networking & Servers, Utilities & Tools, System & Jailbreak, Loaders);
+  extra ones only for ours-only payloads. `icons.json` holds
   content-addressed icon data URIs (`icon_key` = sha256 of data, shared across entries/versions).
   Entries also carry pldmgr fields `id`, `author`, `details_url`, `release_notes` (auto-filled).
   Spec: https://github.com/itsPLK/ps5-payload-manager/blob/main/CUSTOM_REPOSITORIES.md List of payload entries (name, filename, url,
