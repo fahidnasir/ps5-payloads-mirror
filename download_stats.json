@@ -506,5 +506,9 @@
   "blackbox_1.0.9.elf": {
     "download_count": 1,
     "deleted_at": "2026-10-16"
+  },
+  "blackbox_1.11.0.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-19"
   }
 }

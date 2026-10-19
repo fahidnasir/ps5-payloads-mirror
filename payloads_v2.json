@@ -3,6 +3,23 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "blackbox",
+      "filename": "blackbox_1.12.0.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.12.0.elf",
+      "source": "https://github.com/D3ATHLY/blackbox/releases",
+      "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/1.12.0/blackbox.elf",
+      "description": "Homebrew storefront and download manager for PS5.",
+      "last_update": "2026-10-18",
+      "version": "1.12.0",
+      "category": "Game Stores & Downloaders",
+      "checksum": "066cd248590c570d2d568fd10142328d2b29cad5c72d26fcb644e200e07278a8",
+      "author": "D3ATHLY",
+      "release_notes": "## English\n\nIMPORTANT: The Viking download system may not initiate the download on the first attempt. Please exit the browser and try the download process again.\n\n- Download issues with Vikingfile and Archive.org have been completely resolved.\n- Login and registration issues for Torbox and Archive.org have been fixed.\n- Support for internal M.2 drives and external USB storage has been corrected.\n- Games removed from the Archive.org source have been taken off the list, and existing sources have been updated with new ones.\n- PKG game support: Downloading PS5 .pkg files works on firmware versions 11.60 and earlier. If your console is on a version between 12.00 and 13.60, you will not be able to download PS5 .pkg files; however, you can still download files with .exfat and .ffpfsc extensions without any issues.\n- Firmware awareness: BlackBox now automatically detects the console's current firmware version on each device.\n- The console home screen and the application itself have been updated with a BlackBox wallpaper.\n- Links for \"Coin\" support have been added.\n- The \"BETA\" tag has been removed — the application is now simply \"BlackBox.\"\n- A dedicated catalog for games in Turkish has been added.\n- Language files for 10 languages ​​have been updated to fix missing or incorrect translations.\n- Unused features have been removed from the settings menu.\n- Download processes have been optimized for greater stability during both downloading and installation.\n- A shortcut to run \"ShadowMount\" has been added to the \"Downloads\" menu, allowing you to install games after the download is complete.\n- The BlackBox automatic update system has been improved.\n\nNote: We always recommend using the latest version of BlackBox. If games still fail to install after being downloaded, you will need to use ShadowMount.\n\n⚠️ CRITICAL WARNING: NEVER use Payload Manager during this process! The blackbox.elf file is embedded inside PPSA01453.ffpkg and updates automatically. Do NOT load blackbox.elf manually via payload manager.\n\n\n\n## T…",
+      "details_url": "https://raw.githubusercontent.com/D3ATHLY/blackbox/main/README.md",
+      "id": "blackbox",
+      "icon_key": "4a33bd644b152ff4d16f8460f303adf0d26ae8db6fa21b8560d5e9585015e144"
+    },
+    {
       "name": "onionHEN-beta",
       "filename": "onionHEN-beta_v0.9.0.elf",
       "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_v0.9.0.elf",
@@ -19,23 +36,6 @@
       "details_url": "https://raw.githubusercontent.com/aydencharles/onionHEN/main/README.md",
       "id": "onionhen-beta",
       "icon_key": "9c0353458e7f31df4fe6c588f15dbac7df982893b87cf9f84b472487e61a4576"
-    },
-    {
-      "name": "blackbox",
-      "filename": "blackbox_1.11.0.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.11.0.elf",
-      "source": "https://github.com/D3ATHLY/blackbox/releases",
-      "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/1.11.0/blackbox.elf",
-      "description": "Homebrew storefront and download manager for PS5.",
-      "last_update": "2026-10-15",
-      "version": "1.11.0",
-      "category": "Game Stores & Downloaders",
-      "checksum": "b90b03325b673a65de21657d456d8da1fdb5d4f82f73c4dda033bf3547b34c60",
-      "author": "D3ATHLY",
-      "release_notes": "## English\n\nIMPORTANT: The Viking download system may not start the download on the first try. Please exit the browser and try downloading again.\n\n- 200+ new games added to the catalogue (Vikingfile and Archive.org).\n- PKG game support: PS5 .pkg downloads work on firmware 11.60 and below.\n- Viking and Archive.org login/register: sign in to access restricted downloads.\n- Download issues fixed: Viking link capture, mirror domain and multi-connection support.\n- We recommend always using the latest BlackBox version.\n- If games don't install after downloading, you need to use ShadowMount.\n\nFixes: automatic Viking link capture, automatic connection reduction, and the invalid catalogue error.\n\n⚠️ CRITICAL WARNING: NEVER use Payload Manager during this process! The blackbox.elf file is embedded inside PPSA01453.ffpkg and updates automatically. Do NOT load blackbox.elf manually via payload manager.\n\n\n\n## Türkçe\n\nÖNEMLİ: Viking indirme sistemi ilk denemede indirmeyi başlatmayabilir. Lütfen tarayıcıdan çıkıp tekrar indirmeyi deneyin.\n\n- Kataloğa 200'den fazla yeni oyun eklendi (Vikingfile ve Archive.org).\n- PKG oyun desteği: PS5 .pkg indirmeleri yalnızca firmware 11.60 ve altında çalışır.\n- Viking ve Archive.org giriş/kayıt: kısıtlı indirmelere erişmek için giriş yap.\n- İndirme sorunları giderildi: Viking link yakalama, ayna domain ve çoklu bağlantı desteği.\n- Her zaman en son BlackBox sürümünü kullanmanızı öneririz.\n- Oyunlar indirildikten sonra yüklenmiyorsa ShadowMount kullanmanız gerekir.\n\nDüzeltmeler: otomatik Viking link yakalama, otomatik bağlantı düşürme ve geçersiz katalog hatası.",
-      "details_url": "https://raw.githubusercontent.com/D3ATHLY/blackbox/main/README.md",
-      "id": "blackbox",
-      "icon_key": "4a33bd644b152ff4d16f8460f303adf0d26ae8db6fa21b8560d5e9585015e144"
     },
     {
       "name": "orbit-store",
