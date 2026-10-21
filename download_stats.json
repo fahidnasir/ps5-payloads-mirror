@@ -510,5 +510,13 @@
   "blackbox_1.11.0.elf": {
     "download_count": 1,
     "deleted_at": "2026-10-19"
+  },
+  "blackbox_1.12.0.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-21"
+  },
+  "ShadowMountPlus-beta_1.7beta5.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-21"
   }
 }
