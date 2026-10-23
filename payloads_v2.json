@@ -3,6 +3,40 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "blackbox",
+      "filename": "blackbox_1.12.4.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.12.4.elf",
+      "source": "https://github.com/D3ATHLY/blackbox/releases",
+      "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/1.12.4/blackbox.elf",
+      "description": "Homebrew storefront and download manager for PS5.",
+      "last_update": "2026-10-22",
+      "version": "1.12.4",
+      "category": "Game Stores & Downloaders",
+      "checksum": "8c76923f233a66ce53fe774bd2e80d184e07408f9f1e1edcf917f5858e4c758e",
+      "author": "D3ATHLY",
+      "release_notes": "BlackBox 1.12.4\n\n- Fixed: \"Connection lost. Reconnecting to BlackBox...\"",
+      "details_url": "https://raw.githubusercontent.com/D3ATHLY/blackbox/main/README.md",
+      "id": "blackbox",
+      "icon_key": "4a33bd644b152ff4d16f8460f303adf0d26ae8db6fa21b8560d5e9585015e144"
+    },
+    {
+      "name": "orbit-store",
+      "filename": "orbit-store_v1.4.0.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.4.0.elf",
+      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
+      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.4.0/orbit_store.elf",
+      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
+      "last_update": "2026-10-22",
+      "version": "v1.4.0",
+      "category": "Game Stores & Downloaders",
+      "checksum": "e43c6272b3519fc2ec8b9373a484f2c2adb9669d7652567661149da741ab6d94",
+      "author": "saawant12",
+      "release_notes": "**More games, better download recovery, and the freedom to download to your computer now and transfer to your PS5 later.**\n\n- **104 games added in recent catalogue updates: 86 PS5 and 18 PS4.** Orbit now includes **1,702 games and 3,991 download options**, with 166 more options since 1.3.5. These catalogue updates are already available to existing users.\n- **More control over download recovery.** Choose how many times Orbit retries, the delay between attempts, and when a slow download should reconnect. Repeated failures use fewer connections while keeping saved progress.\n- **Larger files through TorBox.** Orbit now sends the request to TorBox instead of blocking it based on its advertised file-size limit. Your account and the source still determine availability; any rejection appears in Downloads.\n- **More in New on Orbit.** Discover now shows up to 40 games in the collection.\n\n## Orbit Zero · Mac, Windows and Linux\n\n- **Download without a PS5.** Choose **Save to → This computer** to download and keep a game locally. Send it to your PS5 later when you’re ready.\n- **Smoother Vikingfile and AkiraBox downloads.** Complete the provider’s verification, then wait. Orbit Zero captures the ready download link and returns automatically, without manually pressing Download.\n- **Refresh expired links with your PS5 offline.** Refresh an interrupted computer download’s link without reconnecting the console or its drive. Orbit checks that it is the same file before continuing from saved progress.\n- **Better transfer recovery.** Resume the PS5 transfer while the computer download continues, or restart a transfer from a retained computer copy. Clearer errors explain when a destination file already exists or a saved PS5 file has changed.\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- **Cleaner extracted game folders.** Redundant wrapper folders are removed when an archive contains a recognised game directory. Other files and folders are preserved.\n- **Clearer native progress and browser errors.** Extra…",
+      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
+      "id": "orbit-store",
+      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
+    },
+    {
       "name": "ShadowMountPlus-beta",
       "filename": "ShadowMountPlus-beta_1.7beta7.elf",
       "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus-beta_1.7beta7.elf",
@@ -22,23 +56,6 @@
       "icon_key": "2d83b692b57d424d0165cad9be37d9e0abe47a17dca0d7c6b9c05c30c4a0ab90"
     },
     {
-      "name": "blackbox",
-      "filename": "blackbox_1.12.3.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.12.3.elf",
-      "source": "https://github.com/D3ATHLY/blackbox/releases",
-      "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/1.12.3/blackbox.elf",
-      "description": "Homebrew storefront and download manager for PS5.",
-      "last_update": "2026-10-21",
-      "version": "1.12.3",
-      "category": "Game Stores & Downloaders",
-      "checksum": "67f87f5a2ab7454f7cf1d7968ddc6e2c33e35cb2aa36c2102a537f3bc5e2d799",
-      "author": "D3ATHLY",
-      "release_notes": "BlackBox 1.12.3\n\nFixes a reopen problem some consoles saw on 1.12.2: the scan that repairs the TV app's install record could overflow its buffer (a 1 MiB stack buffer in a 1 MiB thread stack) and take the whole payload down, so the app looked unreachable and would not reopen. The scan now runs on the heap and cannot overflow.\n\nCatalogue updates also accept feeds that carry a trailing newline, and consoles whose stored revision number comes from the older big numbering now repair themselves and follow the fresh feed again.\n\nEverything else from 1.12.2 stands: PKG games on firmware 12.00-13.60 convert automatically to exFAT when the download finishes, the old package is deleted and the game plays like any other; the conversion stage shows live on the Downloads screen (Downloading, Converting, Done) and completes reliably. Ten languages remain fully translated.\n\nTurkce:\n\n1.12.2 uzerinde bazi konsollarin gordugu yeniden acilma sorunu duzeltildi. TV uygulamasinin kurulum kaydini onaran tarama, tamponunu tasirabiliyordu (1 MiB'lik yigin üzerinde 1 MiB'lik tampon) ve tum cekirdegi düsürüyordu; uygulama ulasilamaz gorup tekrar acilmiyordu. Tarama artik yigin (heap) uzerinde calisir ve asmayi engelleyecek sekilde ayrilistir.\n\nKatalog guncellemeleri sondaki yeni satir bulunan feedleri kabul eder; eski buyuk revizyon numarasi tasiyan konsollar kendini onarir ve yeni feed'i izler.\n\n1.12.2'den diger her se yerinde duruyor: 12.00-13.60 firmware'de PKG oyunlar indirme bitince otomatik exFAT'a donusur, eski paket silinir ve oyun normal oynanir; donusum asamasi Indirilenler ekraninda canli gorunur (Indiriliyor, Donusturuluyor, Tamamlandi) ve guvenli tamamlanir. On dil tam cevrili.",
-      "details_url": "https://raw.githubusercontent.com/D3ATHLY/blackbox/main/README.md",
-      "id": "blackbox",
-      "icon_key": "4a33bd644b152ff4d16f8460f303adf0d26ae8db6fa21b8560d5e9585015e144"
-    },
-    {
       "name": "onionHEN-beta",
       "filename": "onionHEN-beta_v0.9.0.elf",
       "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_v0.9.0.elf",
@@ -55,23 +72,6 @@
       "details_url": "https://raw.githubusercontent.com/aydencharles/onionHEN/main/README.md",
       "id": "onionhen-beta",
       "icon_key": "9c0353458e7f31df4fe6c588f15dbac7df982893b87cf9f84b472487e61a4576"
-    },
-    {
-      "name": "orbit-store",
-      "filename": "orbit-store_v1.3.5.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.3.5.elf",
-      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
-      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.3.5/orbit_store.elf",
-      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
-      "last_update": "2026-10-14",
-      "version": "v1.3.5",
-      "category": "Game Stores & Downloaders",
-      "checksum": "561a8e8015d9564d44e32b58a84e1294ea7043e96146110801a9f62ad99ac93b",
-      "author": "saawant12",
-      "release_notes": "**Archive.org sign-in comes to Orbit.**\n\n- **Archive.org sign-in.** Connect your account in the native PS5 app, browser or Orbit Zero to access downloads that require signing in.\n- **225 unavailable Archive.org links removed, and 3 games also had to go.** Links that require an Archive.org account are still included.\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- **Smoother Vikingfile and AkiraBox downloads.** Complete the provider’s verification, then wait. Orbit automatically captures the download link and returns you to the app, without manually pressing Download.\n\n## Orbit Zero · Mac, Windows and Linux\n\n- **TorBox downloads on your computer.** Connect TorBox in Download settings, download through supported sources and transfer to your PS5.\n- **Recover completed downloads from your computer cache.** Restore a removed download entry and transfer the saved file without downloading it again.\n- **Reconnect after your PS5's address changes.** Update its address and verify the connection. Recovery is also available after pairing has been reset.\n- **Better download and transfer recovery.** Interrupted computer downloads retry automatically. Resume stalled PS5 transfers or remove stuck entries from Downloads while keeping their files.\n- **Clearer errors.** See which stage needs attention and open the original source page directly.\n\n[Install Orbit Zero on Mac, Windows or Linux](https://github.com/saawant12/orbit-store-ps5/blob/main/guides/orbit-zero-installation.md) · [Set up a PS5 without internet](https://github.com/saawant12/orbit-store-ps5/blob/main/guides/orbit-zero-offline-ps5.md) · [Update Orbit Store on PS5](https://github.com/saawant12/orbit-store-ps5/blob/main/guides/getting-started.md#update-the-tv-app)",
-      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
-      "id": "orbit-store",
-      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
     },
     {
       "name": "pegasus-dl",

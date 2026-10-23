@@ -518,5 +518,13 @@
   "ShadowMountPlus-beta_1.7beta5.elf": {
     "download_count": 1,
     "deleted_at": "2026-10-21"
+  },
+  "blackbox_1.12.3.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-23"
+  },
+  "orbit-store_v1.3.5.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-23"
   }
 }
