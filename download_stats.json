@@ -526,5 +526,9 @@
   "orbit-store_v1.3.5.elf": {
     "download_count": 1,
     "deleted_at": "2026-10-23"
+  },
+  "blackbox_1.12.4.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-24"
   }
 }

@@ -4,17 +4,16 @@
   "payloads": [
     {
       "name": "blackbox",
-      "filename": "blackbox_1.12.4.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.12.4.elf",
+      "filename": "blackbox_1.12.5.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.12.5.elf",
       "source": "https://github.com/D3ATHLY/blackbox/releases",
-      "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/1.12.4/blackbox.elf",
+      "source_direct": "https://github.com/D3ATHLY/blackbox/releases/download/1.12.5/blackbox.elf",
       "description": "Homebrew storefront and download manager for PS5.",
-      "last_update": "2026-10-22",
-      "version": "1.12.4",
+      "last_update": "2026-10-23",
+      "version": "1.12.5",
       "category": "Game Stores & Downloaders",
-      "checksum": "8c76923f233a66ce53fe774bd2e80d184e07408f9f1e1edcf917f5858e4c758e",
+      "checksum": "c99c154b0b141e9a845f3029f7e905644958104ff3ed93911c38a458344f3e3f",
       "author": "D3ATHLY",
-      "release_notes": "BlackBox 1.12.4\n\n- Fixed: \"Connection lost. Reconnecting to BlackBox...\"",
       "details_url": "https://raw.githubusercontent.com/D3ATHLY/blackbox/main/README.md",
       "id": "blackbox",
       "icon_key": "4a33bd644b152ff4d16f8460f303adf0d26ae8db6fa21b8560d5e9585015e144"
