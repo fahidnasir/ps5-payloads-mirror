@@ -3,6 +3,23 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "orbit-store",
+      "filename": "orbit-store_v1.5.0.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.5.0.elf",
+      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
+      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.5.0/orbit_store.elf",
+      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
+      "last_update": "2026-10-24",
+      "version": "v1.5.0",
+      "category": "Game Stores & Downloaders",
+      "checksum": "9590ef2cfa8764eb96fbe52dec302f1d9c8ba7d51101f031a69ac1279d20e579",
+      "author": "saawant12",
+      "release_notes": "**A major update:** DLCs, game installation support and over 2,000 games now in Orbit.\n\n- **Install without leaving Orbit.** After a PKG or FPKG downloads or transfers, choose **Install on PS5**. If a download has several packages, pick the ones you want. For exFAT, FFPFSC and extracted game folders, Orbit asks ShadowMount to scan for them, if a supported version is running.\n- **445 add-ons for 78 games.** Browse and download expansions, content packs, activation packages and bundles on the new **Add-ons** page, or from a game’s details.\n- **Over 2,000 games.** This update adds 195 games (188 PS4 and 7 PS5) and 71 more download choices for games already in Orbit. The catalogue now has 2,026 games.\n- **Know what your firmware can run.** Download options show the firmware they need, when it’s known. Options that won’t run on your PS5 are listed last with a warning, and you can still download them.\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- **Update Orbit in one step.** **Update Orbit** updates the TV app and the download service together. If your ELF loader is running, Orbit restarts itself and picks up your downloads where they left off. You can also restart Orbit on its own from Updates.\n- **Download notifications.** Your PS5 tells you when a download finishes or fails, in your console’s language. You can turn this off in settings.\n- **Save a diagnostic report.** In the TV app, **More settings → Save diagnostic report** saves a report you can attach to a bug report, on a USB drive or the PS5’s own storage. It has no game titles, download links, passwords or tokens.\n- **Better download retries.** Downloads resume from the progress saved on your drive, and Retry still works if the partial file was deleted or is empty.\n- **Find the right add-on.** Search by add-on or game name, and filter by platform, type, source and region, in every interface. An add-on’s details show which game it needs, and any version it requires, before you download.\n\n## Orbit Zero · Mac, Windows and Linu…",
+      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
+      "id": "orbit-store",
+      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
+    },
+    {
       "name": "blackbox",
       "filename": "blackbox_1.12.5.elf",
       "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/blackbox_1.12.5.elf",
@@ -16,24 +33,8 @@
       "author": "D3ATHLY",
       "details_url": "https://raw.githubusercontent.com/D3ATHLY/blackbox/main/README.md",
       "id": "blackbox",
-      "icon_key": "4a33bd644b152ff4d16f8460f303adf0d26ae8db6fa21b8560d5e9585015e144"
-    },
-    {
-      "name": "orbit-store",
-      "filename": "orbit-store_v1.4.0.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.4.0.elf",
-      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
-      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.4.0/orbit_store.elf",
-      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
-      "last_update": "2026-10-22",
-      "version": "v1.4.0",
-      "category": "Game Stores & Downloaders",
-      "checksum": "e43c6272b3519fc2ec8b9373a484f2c2adb9669d7652567661149da741ab6d94",
-      "author": "saawant12",
-      "release_notes": "**More games, better download recovery, and the freedom to download to your computer now and transfer to your PS5 later.**\n\n- **104 games added in recent catalogue updates: 86 PS5 and 18 PS4.** Orbit now includes **1,702 games and 3,991 download options**, with 166 more options since 1.3.5. These catalogue updates are already available to existing users.\n- **More control over download recovery.** Choose how many times Orbit retries, the delay between attempts, and when a slow download should reconnect. Repeated failures use fewer connections while keeping saved progress.\n- **Larger files through TorBox.** Orbit now sends the request to TorBox instead of blocking it based on its advertised file-size limit. Your account and the source still determine availability; any rejection appears in Downloads.\n- **More in New on Orbit.** Discover now shows up to 40 games in the collection.\n\n## Orbit Zero · Mac, Windows and Linux\n\n- **Download without a PS5.** Choose **Save to → This computer** to download and keep a game locally. Send it to your PS5 later when you’re ready.\n- **Smoother Vikingfile and AkiraBox downloads.** Complete the provider’s verification, then wait. Orbit Zero captures the ready download link and returns automatically, without manually pressing Download.\n- **Refresh expired links with your PS5 offline.** Refresh an interrupted computer download’s link without reconnecting the console or its drive. Orbit checks that it is the same file before continuing from saved progress.\n- **Better transfer recovery.** Resume the PS5 transfer while the computer download continues, or restart a transfer from a retained computer copy. Clearer errors explain when a destination file already exists or a saved PS5 file has changed.\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- **Cleaner extracted game folders.** Redundant wrapper folders are removed when an archive contains a recognised game directory. Other files and folders are preserved.\n- **Clearer native progress and browser errors.** Extra…",
-      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
-      "id": "orbit-store",
-      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
+      "icon_key": "4a33bd644b152ff4d16f8460f303adf0d26ae8db6fa21b8560d5e9585015e144",
+      "release_notes": "Fixed: \"Connection lost. Reconnecting to BlackBox...\"\nFixed: Camera error (Partially)\nFixed: 12.00 - 13.60 PKG to Exfat converter (Not supporting all games)"
     },
     {
       "name": "ShadowMountPlus-beta",
