@@ -534,5 +534,13 @@
   "orbit-store_v1.4.0.elf": {
     "download_count": 1,
     "deleted_at": "2026-10-25"
+  },
+  "orbit-store_v1.5.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-10-26"
+  },
+  "ShadowMountPlus-beta_1.7beta7.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-10-26"
   }
 }
