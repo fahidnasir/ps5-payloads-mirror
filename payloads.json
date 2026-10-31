@@ -3,6 +3,23 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "orbit-store",
+      "filename": "orbit-store_v1.8.1.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.8.1.elf",
+      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
+      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.1/orbit_store.elf",
+      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
+      "last_update": "2026-10-30",
+      "version": "v1.8.1",
+      "category": "Game Stores & Downloaders",
+      "checksum": "a9fe33c3b0338af074edb4f7c68bb3806a84efba718e3897f94eba9dc720f914",
+      "author": "saawant12",
+      "release_notes": "# Orbit Store 1.8.1 (Beta)\n\n**Performance improvements and bug fixes.**\n\n- **Copy and move while downloading.** Fixed a bug that prevented copying or moving games and files while a download was active. Orbit keeps enough space for both, and downloads can start or resume during a copy.\n- **54 more games.** The catalogue now has 2,157 games (1,181 PS5 and 976 PS4) with 4,997 download options.\n\n> **Orbit stays free.** [Orbit Store](https://github.com/saawant12/orbit-store-ps5), [Orbit Zero](https://github.com/saawant12/orbit-store-ps5#orbit-zero-for-mac-windows-and-linux), [Orbit Play](https://github.com/saawant12/orbit-play-ps5) and our upcoming apps are free and will stay free.\n>\n> I’ve been building Orbit in my own time and covering the costs of AI tools, test consoles, hardware and servers. If you’d like to help, you can [support Orbit on Buy Me a Coffee](https://buymeacoffee.com/saawant12). It’s entirely optional.\n\nWe’re also shipping bug fixes across our apps:\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- **Pairing a new device always works.** When every pairing slot is taken, a new device replaces the one that has gone longest without using Orbit, and that device is asked to pair again. The PS5’s own app is never replaced.\n- **Fewer requests to Vikingfile and other providers.** Downloads to a USB drive asked the provider’s link again for every small piece of the file, which could lead to rate limits and timeouts. Orbit now asks once and fetches the rest straight from storage.\n\n## Orbit Zero · Mac, Windows and Linux\n\n- **Pairing on Linux with any desktop.** Zero now saves its pairing in your system keyring under window managers such as awesome, i3 and sway, not only on desktops like GNOME and KDE.\n- **Failed pairings no longer use up PS5 slots.** Zero checks that it can save the pairing before asking the PS5.\n- **Send from Orbit Zero while the PS5 downloads.** Transfers from your computer no longer wait for PS5 downloads to pause.\n\n[Install Orbit Zero on Mac, Windows or Linux]…",
+      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
+      "id": "orbit-store",
+      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
+    },
+    {
       "name": "ShadowMountPlus-beta",
       "filename": "ShadowMountPlus-beta_1.7beta11.elf",
       "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus-beta_1.7beta11.elf",
@@ -20,23 +37,6 @@
       "details_url": "https://raw.githubusercontent.com/drakmor/ShadowMountPlus/1.7/README.md",
       "id": "shadowmountplus-beta",
       "icon_key": "2d83b692b57d424d0165cad9be37d9e0abe47a17dca0d7c6b9c05c30c4a0ab90"
-    },
-    {
-      "name": "orbit-store",
-      "filename": "orbit-store_v1.7.5.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.7.5.elf",
-      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
-      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.7.5/orbit_store.elf",
-      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
-      "last_update": "2026-10-29",
-      "version": "v1.7.5",
-      "category": "Game Stores & Downloaders",
-      "checksum": "c5c601dd349b52c650ee4147fc89d9e2ab9a7d1df35e6e6039eee1175194e832",
-      "author": "saawant12",
-      "release_notes": "# Orbit Store 1.7.5 (Beta)\n\n**LZ4 🦎 (credits to DLPSGAME) comes to Orbit**, alongside more games and improvements to downloads, TorBox and Library moves.\n\n- **Find LZ4 games.** Select **LZ4** in the Format filter in Orbit Store’s browser, native PS5 app or Orbit Zero, in all four interfaces. The catalogue includes **49 LZ4 download options across 48 PS5 games**.\n- **More games and download choices.** Orbit’s catalogue now contains **2,103 games: 1,132 PS5 and 971 PS4**, with **4,940 game download options**, plus **626 DLCs and add-ons with 628 options across 192 base games**.\n\n> **Orbit stays free.** [Orbit Store](https://github.com/saawant12/orbit-store-ps5), [Orbit Zero](https://github.com/saawant12/orbit-store-ps5#orbit-zero-for-mac-windows-and-linux), [Orbit Play](https://github.com/saawant12/orbit-play-ps5) and our upcoming apps are free and will stay free.\n>\n> I’ve been building Orbit in my own time and covering the costs of AI tools, test consoles, hardware and servers. If you’d like to help, you can [support Orbit on Buy Me a Coffee](https://buymeacoffee.com/saawant12). It’s entirely optional.\n\n**Updated:** Support Orbit is now available in Settings across the native PS5 app, browser and Orbit Zero, with an optional support link and QR code.\n\nWe’re also shipping improvements and bug fixes across our apps:\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- **Better download recovery.** Interrupted connections retry from their saved position while other parts of the download continue. Resume checks the saved provider link and tells you when it needs refreshing. Brief service timeouts no longer immediately show Orbit as unavailable in the TV app.\n- **Recognise your drive after a restart.** Orbit can recognise the original download drive after the PS5 remounts it following a power cut or repair, so you can resume from its retained partial file.\n- **Clearer TorBox errors.** Downloads explain when the original source no longer has a file or the download server cannot be reached. O…",
-      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
-      "id": "orbit-store",
-      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
     },
     {
       "name": "blackbox",
