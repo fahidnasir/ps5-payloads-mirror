@@ -570,5 +570,9 @@
   "blackbox_1.12.5.elf": {
     "download_count": 1,
     "deleted_at": "2026-10-31"
+  },
+  "orbit-store_v1.8.1.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-11-01"
   }
 }
