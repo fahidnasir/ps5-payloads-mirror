@@ -586,5 +586,13 @@
   "orbit-store_v1.8.4.elf": {
     "download_count": 1,
     "deleted_at": "2026-11-05"
+  },
+  "ProsperoMgr_v1.1.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-11-09"
+  },
+  "ShadowMountPlus-beta_1.7beta11.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-11-09"
   }
 }
