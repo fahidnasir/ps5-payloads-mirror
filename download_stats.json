@@ -594,5 +594,9 @@
   "ShadowMountPlus-beta_1.7beta11.elf": {
     "download_count": 0,
     "deleted_at": "2026-11-09"
+  },
+  "onionHEN-beta_v0.9.0.elf": {
+    "download_count": 1,
+    "deleted_at": "2026-11-12"
   }
 }

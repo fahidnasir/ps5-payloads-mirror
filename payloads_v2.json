@@ -3,6 +3,24 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "onionHEN-beta",
+      "filename": "onionHEN-beta_nightly.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_nightly.elf",
+      "source": "https://github.com/aydencharles/onionHEN/releases",
+      "source_direct": "https://github.com/aydencharles/onionHEN/releases/download/nightly/OnionHEN.elf",
+      "prerelease": true,
+      "description": "OnionHEN (Beta/pre-release channel.)",
+      "last_update": "2026-11-12",
+      "version": "nightly",
+      "category": "System & Jailbreak",
+      "checksum": "d0620cc430c10ac2bc7776bd10265742075c7b782b5c8c3fd05cf46e752ed49e",
+      "author": "aydencharles",
+      "release_notes": "Automated **Release** build of `main` at [`39683d3`](https://github.com/aydencharles/onionHEN/commit/39683d33b43296df2701cd824204526e3d16e375), built 2026-11-12 04:24 UTC.\n\nThis is an untested development build. Use the latest stable release unless you want to try new changes early.\n\n- Changes since v0.9.0: [`v0.9.0...39683d3`](https://github.com/aydencharles/onionHEN/compare/v0.9.0...39683d33b43296df2701cd824204526e3d16e375)\n- `OnionHEN.elf` SHA-256: `d0620cc430c10ac2bc7776bd10265742075c7b782b5c8c3fd05cf46e752ed49e`",
+      "details_url": "https://raw.githubusercontent.com/aydencharles/onionHEN/main/README.md",
+      "id": "onionhen-beta",
+      "icon_key": "9c0353458e7f31df4fe6c588f15dbac7df982893b87cf9f84b472487e61a4576"
+    },
+    {
       "name": "ProsperoMgr",
       "filename": "ProsperoMgr_v1.2.elf",
       "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ProsperoMgr_v1.2.elf",
@@ -72,24 +90,6 @@
       "details_url": "https://raw.githubusercontent.com/elripalda/RecompStore/main/README.md",
       "id": "recompstore",
       "icon_key": "ef332f86e02ce9fb65652bd38e7b61d571c3483fc91250d479952dbc7dd52d86"
-    },
-    {
-      "name": "onionHEN-beta",
-      "filename": "onionHEN-beta_v0.9.0.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_v0.9.0.elf",
-      "source": "https://github.com/aydencharles/onionHEN/releases",
-      "source_direct": "https://github.com/aydencharles/onionHEN/releases/download/v0.9.0/OnionHEN.elf",
-      "prerelease": true,
-      "description": "OnionHEN (Beta/pre-release channel.)",
-      "last_update": "2026-10-15",
-      "version": "v0.9.0",
-      "category": "System & Jailbreak",
-      "checksum": "1f1f7c883d5d998be1d95d7d80b718f85180f8156f257661b0f445a7c6b7c212",
-      "author": "aydencharles",
-      "release_notes": "# OnionHEN v0.9.0\n\nOnionHEN is a homebrew enabler and Toolbox for jailbroken PS5 consoles, built on etaHEN. It prepares the system, injects a Toolbox into the home screen, and adds cheats, a game overlay, payload management, and background services.\n\n**Version:** v0.9.0 is the stable release following v0.9.0-beta1 and v0.9.0-beta2. It brings together their changes since [v0.0.13](https://github.com/aydencharles/onionHEN/releases/tag/v0.0.13).\n\n**Firmware:** Adds support for **13.0-13.6** and **some 5.50 consoles**, alongside the firmware supported by v0.0.13. Please include your exact firmware and console behavior when reporting a problem.\n\n**Download:** `OnionHEN.elf` (Release build; SHA-256: `1f1f7c883d5d998be1d95d7d80b718f85180f8156f257661b0f445a7c6b7c212`).\n\n## What changed since v0.0.13\n\n### Firmware compatibility\n\nThis release adds support for firmware **13.0-13.6** and **some 5.50 consoles**. Reports from real hardware are welcome.\n\n### Cheats\n\nOn firmware 4.03, opening the cheats menu for a game with no cheats could take about 40 seconds, then leave the home screen unresponsive until a forced reboot ([#97](https://github.com/aydencharles/onionHEN/issues/97), [#103](https://github.com/aydencharles/onionHEN/issues/103)). The beta2 fix makes an empty menu return in a few seconds without stalling ShellUI. The reporter on #103 confirmed the problem was gone in an early beta2 build.\n\nLong cheat names are also truncated on UTF-8 boundaries.\n\n### elfldr\n\nv0.0.13 needed elfldr v0.22 because it loaded the cache through a `file:` URI. v0.9.0 sends a normal ELF to port **9021**, so older elfldr builds work again. An external elfldr must still be listening on 9021.\n\n### Also\n\n- The bundled kstuff is **kstuff-lite 1.11**, up from 1.10 in v0.0.13.\n- Toolbox strings cover the remaining PS5 system languages. Startup toasts credit the author and thank contributors; the thanks toast can be turned off in Preferences. The About page lists testers and donors.\n- Daemon, bootstrapper, and ShellUI share `/data/OnionHEN/OnionH…",
-      "details_url": "https://raw.githubusercontent.com/aydencharles/onionHEN/main/README.md",
-      "id": "onionhen-beta",
-      "icon_key": "9c0353458e7f31df4fe6c588f15dbac7df982893b87cf9f84b472487e61a4576"
     },
     {
       "name": "blackbox",
