@@ -3,6 +3,23 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "orbit-store",
+      "filename": "orbit-store_v1.9.0.elf",
+      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.9.0.elf",
+      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
+      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.9.0/orbit_store.elf",
+      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
+      "last_update": "2026-11-13",
+      "version": "v1.9.0",
+      "category": "Game Stores & Downloaders",
+      "checksum": "4d2b78ad4c0de1211b93664d5401beb1e19e54452fccc74886d4cb63b659439a",
+      "author": "saawant12",
+      "release_notes": "> **🎉 Orbit is now on PS4 too.** Get the new [Orbit Store for PS4](https://github.com/saawant12/orbit-store-ps4) port, with downloads and setup instructions in its own repository.\n\nWe’re shipping new features and fixes across Orbit Store and Orbit Zero.\n\n- **Scores and playtimes for 1,663 games.** See Metacritic scores and HowLongToBeat estimates on game pages. Browse by minimum score or playtime, choose Main Story, Main + Extras or Completionist, and save your filters. Coverage includes 645 scores and 1,568 playtime records; games with unknown values remain unlabelled. You can hide scores and playtimes on game cards in **Appearance**.\n- **Remember your download choice.** Orbit remembers Direct or TorBox. Turn on **Always use TorBox** to use it for new downloads, subject to your account and the source’s support.\n- **Improved Vikingfile downloads.** Better download-link detection and support for more Vikingfile servers help Orbit capture links more reliably across Orbit Store and Orbit Zero.\n- **A clearer Library.** Games and Files stay together, with one counted **All games / Available now / Missing source** filter. Separate **Installed** and **Mounted** badges show each game’s status.\n- **More catalogue detail.** Orbit now has **2,390 games with 5,335 download options**, plus **631 add-ons with 633 options across 197 base games**.\n- **Artwork stays ready between visits.** Orbit keeps a bounded artwork cache across restarts, reuses cached backup images when a host is unavailable, and uses smaller images for tiles across the native app, browser and Zero.\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- **Check game folders before making repairs.** Orbit automatically checks extracted game folders. For an existing folder, open **Library → Files → Verify & Repair**. Review proposed changes before applying them. Orbit can restore required permissions and fix uniquely matched filename-capitalization errors; missing files remain warnings.\n- **Find games inside nested folders.** After extr…",
+      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
+      "id": "orbit-store",
+      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
+    },
+    {
       "name": "onionHEN-beta",
       "filename": "onionHEN-beta_nightly.elf",
       "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_nightly.elf",
@@ -55,23 +72,6 @@
       "details_url": "https://raw.githubusercontent.com/drakmor/ShadowMountPlus/1.7/README.md",
       "id": "shadowmountplus-beta",
       "icon_key": "2d83b692b57d424d0165cad9be37d9e0abe47a17dca0d7c6b9c05c30c4a0ab90"
-    },
-    {
-      "name": "orbit-store",
-      "filename": "orbit-store_v1.8.5.elf",
-      "url": "https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.8.5.elf",
-      "source": "https://github.com/saawant12/orbit-store-ps5/releases",
-      "source_direct": "https://github.com/saawant12/orbit-store-ps5/releases/download/v1.8.5/orbit_store.elf",
-      "description": "Download manager with resumable downloads, a native TV app and phone controls.",
-      "last_update": "2026-11-04",
-      "version": "v1.8.5",
-      "category": "Game Stores & Downloaders",
-      "checksum": "935f81956acd3acba876977057c2ce77ded6a7fc72a98fd821cba2d1765e1f77",
-      "author": "saawant12",
-      "release_notes": "We’re shipping improvements and bug fixes across our apps:\n\n## Orbit Store · Native PS5 app (FFPKG) and browser (ELF)\n\n- Fixed the Downloads list jumping or losing your selection when you resume a download, refresh the list or remove an entry. This applies to all four layouts.\n- Fixed downloads looking stuck on **Inspecting archive**.\n\n## Orbit Zero · Mac, Windows and Linux\n\n- Fixed an issue where paused or failed downloads stopped you from adding new downloads.\n- Fixed the Downloads list moving around as downloads change status or when you close a download’s details. This applies to all four layouts.\n- Fixed file permissions when sending game folders to the PS5, including when resuming an interrupted transfer.\n- Settings now shows the right catalogue revision and tells you if a refresh fails.\n\n> **Orbit stays free.** [Orbit Store](https://github.com/saawant12/orbit-store-ps5), [Orbit Zero](https://github.com/saawant12/orbit-store-ps5#orbit-zero-for-mac-windows-and-linux), [Orbit Play](https://github.com/saawant12/orbit-play-ps5) and our upcoming apps are free and will stay free.\n>\n> I’ve been building Orbit in my own time and covering the costs of AI tools, test consoles, hardware and servers. If you’d like to help, you can [support Orbit via crypto](https://github.com/saawant12/orbit-store-ps5/issues/131#user-content-support-with-crypto). It’s entirely optional.\n\n[Install Orbit Zero on Mac, Windows or Linux](https://github.com/saawant12/orbit-store-ps5/blob/main/guides/orbit-zero-installation.md) · [Install Orbit Store on PS5](https://github.com/saawant12/orbit-store-ps5/blob/main/guides/getting-started.md#install-the-native-tv-app)\n\n<br>\n\n## Install Orbit Zero on your computer\n\nChoose the package matching your computer from **Assets**: macOS DMG, Windows installer or ZIP, or Ubuntu/Debian DEB. Linux TAR.GZ packages are also available. Both ARM64 and x64 builds are included; Linux DEB names use **amd64** for Intel/AMD computers. Quit the older app before installing the new version. See the [ins…",
-      "details_url": "https://raw.githubusercontent.com/saawant12/orbit-store-ps5/main/README.md",
-      "id": "orbit-store",
-      "icon_key": "978b773aaaddebc834d85fb2fd7ad32b25b6252aa1d23f5d2e4ae68c3dac2cb2"
     },
     {
       "name": "RecompStore",
