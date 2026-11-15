@@ -602,5 +602,9 @@
   "orbit-store_v1.8.5.elf": {
     "download_count": 1,
     "deleted_at": "2026-11-14"
+  },
+  "orbit-store_v1.9.0.elf": {
+    "download_count": 0,
+    "deleted_at": "2026-11-15"
   }
 }
