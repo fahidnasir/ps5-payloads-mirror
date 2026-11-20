@@ -7,7 +7,7 @@ This repository contains an automated mirror of useful payloads for the PlayStat
 <!-- PAYLOADS_START -->
 | Payload | Version | Description | Last Updated | Source | Download |
 | --- | --- | --- | --- | --- | --- |
-| **orbit-store** | `v1.9.2` | Download manager with resumable downloads, a native TV app and phone controls. | `2026-11-16` | [Source](https://github.com/saawant12/orbit-store-ps5/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.9.2.elf) |
+| **orbit-store** | `v1.9.5` | Download manager with resumable downloads, a native TV app and phone controls. | `2026-11-19` | [Source](https://github.com/saawant12/orbit-store-ps5/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/orbit-store_v1.9.5.elf) |
 | **ProsperoMgr** | `v1.2.1` | Web-based all-in-one homebrew manager for PS5. | `2026-11-15` | [Source](https://github.com/notmaj0r/ProsperoMgr/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ProsperoMgr_v1.2.1.elf) |
 | **onionHEN-beta** | `nightly` | OnionHEN (Beta/pre-release channel.) | `2026-11-12` | [Source](https://github.com/aydencharles/onionHEN/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/onionHEN-beta_nightly.elf) |
 | **ShadowMountPlus-beta** | `1.7beta12` | A fully automated, background 'Auto-Mounter' payload for Jailbroken PlayStation 5 consoles. (Beta/pre-release channel.) | `2026-11-08` | [Source](https://github.com/drakmor/ShadowMountPlus/releases) | [Download](https://github.com/fahidnasir/ps5-payloads-mirror/releases/download/payloads-mirror/ShadowMountPlus-beta_1.7beta12.elf) |
